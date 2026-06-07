@@ -2512,6 +2512,7 @@
 
   .cat-flexContainer {
     gap: 28px;
+    justify-content: center;
   }
 
   .cat-circleOuter {
