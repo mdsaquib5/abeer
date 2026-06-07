@@ -16,31 +16,31 @@ const reelsData = [
     id: 1,
     title: "Floral Affairé",
     subtitle: "Nargís Collection",
-    videoSrc: "/nargis.mp4",
+    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861644/nargis_rsodyq.mp4",
   },
   {
     id: 2,
     title: "Qala Editorial",
     subtitle: "Solid Ivory Dress",
-    videoSrc: "/qala-one-pirce-ethenic-dress/video-8.mov",
+    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861762/video-8_anklft.mov",
   },
   {
     id: 3,
     title: "Geet Lookbook",
     subtitle: "Basant Bahaar Farshi",
-    videoSrc: "/geet-kurta-set-2pc/video-1.mov",
+    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861949/video-1_bndukx.mov",
   },
   {
     id: 4,
     title: "Hania Movement",
     subtitle: "Slow Crafted Rust Farshi",
-    videoSrc: "/hania-kurta-set-2pc/video-3.mov",
+    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861868/video-5_fhyl9z.mov",
   },
   {
     id: 5,
     title: "Geet Kurti",
     subtitle: "Summer Mint Green",
-    videoSrc: "/geet-kurta-set-2pc/video-2.mov",
+    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861937/video-2_kn6xce.mov",
   }
 ];
 

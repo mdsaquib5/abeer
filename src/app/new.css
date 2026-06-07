@@ -3659,7 +3659,6 @@
 }
 
 .reels-card:hover {
-  transform: translateY(-8px);
   box-shadow: 0 16px 40px rgba(77, 38, 24, 0.15);
 }
 
