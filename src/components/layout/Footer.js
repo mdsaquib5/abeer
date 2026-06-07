@@ -8,18 +8,20 @@ export default function Footer() {
     <footer className="ftr-footer">
       <div className="container">
         <div className="ftr-footerGrid">
-          {/* Brand Col */}
           <div className="ftr-brandCol">
-            <h2 className="ftr-logo">ABEER</h2>
-            <p className="ftr-tagline">Wear Your Soul</p>
+            <div className='footer-logo'>
+              <Link href="/" className="ftr-logo">
+                ABEER
+              </Link>
+              <span className="ftr-tagline">अबीर</span>
+            </div>
+            <p className="ftr-cursiveTagline">Wear Your Soul</p>
             <p className="ftr-description">
               Abeer is a reflection of slow fashion, quiet luxury, and timeless design.
               We create consciously made pieces that remain relevant long after trends fade,
               crafted for the modern desi muse.
             </p>
           </div>
-
-          {/* Quick Links Col */}
           <div className="ftr-linksCol">
             <h3 className="ftr-colTitle">Quick Links</h3>
             <ul className="ftr-linksList">
@@ -29,8 +31,6 @@ export default function Footer() {
               <li><Link href="/#about-section" className="ftr-link">Our Story</Link></li>
             </ul>
           </div>
-
-          {/* Policies Col */}
           <div className="ftr-linksCol">
             <h3 className="ftr-colTitle">Policies</h3>
             <ul className="ftr-linksList">
@@ -40,7 +40,6 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Col */}
           <div className="ftr-contactCol">
             <h3 className="ftr-colTitle">Customer Care</h3>
             <ul className="ftr-contactList">

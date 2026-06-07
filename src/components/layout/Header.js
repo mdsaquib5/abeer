@@ -75,7 +75,6 @@ export default function Header() {
               <span className="hdr-tagline">अबीर</span>
             </div>
 
-            {/* Right Cart Icon */}
             <div className="hdr-headerRight">
               <Link href="/cart" className="hdr-cartIcon" aria-label="Shopping Cart">
                 <IoBagOutline />

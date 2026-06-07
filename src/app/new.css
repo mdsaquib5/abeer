@@ -1887,12 +1887,33 @@
   color: var(--primary);
   letter-spacing: 0.12em;
   margin-bottom: 4px;
+  border-bottom: 1px solid var(--primary);
+  line-height: 1;
+  display: inline-block;
+  align-self: flex-start;
+}
+
+.footer-logo {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .ftr-tagline {
-  font-family: var(--font-accent);
+  font-family: "Khand", sans-serif;
+  font-weight: 500;
   color: var(--primary);
   font-size: 1.4rem;
+  margin-bottom: 4px;
+  letter-spacing: 0.02em;
+}
+
+.ftr-cursiveTagline {
+  font-family: var(--font-accent);
+  color: var(--primary);
+  font-size: 1.6rem;
   margin-bottom: 20px;
 }
 
