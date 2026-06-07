@@ -52,8 +52,8 @@ export default function Footer() {
               </li>
               <li>
                 <span className="ftr-contactLabel">Instagram:</span>
-                <a href="https://instagram.com/abeers.label" target="_blank" rel="noopener noreferrer" className="ftr-contactValue">
-                  @abeers.label
+                <a href="https://www.instagram.com/abeer.label/" target="_blank" rel="noopener noreferrer" className="ftr-contactValue">
+                  @abeer.label
                 </a>
               </li>
               <li>
@@ -67,7 +67,7 @@ export default function Footer() {
               <a href="https://wa.me/918076006802" target="_blank" rel="noopener noreferrer" className="ftr-socialLink" aria-label="WhatsApp">
                 <IoLogoWhatsapp />
               </a>
-              <a href="https://instagram.com/abeers.label" target="_blank" rel="noopener noreferrer" className="ftr-socialLink" aria-label="Instagram">
+              <a href="https://www.instagram.com/abeer.label/" target="_blank" rel="noopener noreferrer" className="ftr-socialLink" aria-label="Instagram">
                 <IoLogoInstagram />
               </a>
               <a href="mailto:write@abeerlabel.com" className="ftr-socialLink" aria-label="Email">
