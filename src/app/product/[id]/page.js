@@ -9,8 +9,7 @@ import { useCartStore } from '@/store/cartStore';
 import Accordion from '@/components/ui/Accordion';
 import SectionTitle from '@/components/ui/SectionTitle';
 import ProductCard from '@/components/shared/ProductCard';
-import { IoArrowBackOutline } from 'react-icons/io5';
-;
+import { IoArrowBackOutline, IoPlay } from 'react-icons/io5';
 
 export default function ProductDetailPage({ params: paramsPromise }) {
   const router = useRouter();
@@ -101,20 +100,33 @@ export default function ProductDetailPage({ params: paramsPromise }) {
           {/* Gallery Block */}
           <div className="prod-galleryContainer">
             <div className="prod-activeImageWrapper">
-              {product.images && product.images[activeImage] && (
-                <Image
-                  src={product.images[activeImage]}
-                  alt={product.name}
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="prod-activeImage"
+              {activeImage === 'video' && product.video ? (
+                <video
+                  src={product.video}
+                  className="prod-activeVideo prod-activeImage"
+                  controls
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="metadata"
                 />
+              ) : (
+                product.images && product.images[activeImage] && (
+                  <Image
+                    src={product.images[activeImage]}
+                    alt={product.name}
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="prod-activeImage"
+                  />
+                )
               )}
             </div>
 
             {/* Thumbnails grid */}
-            {product.images && product.images.length > 1 && (
+            {((product.images && product.images.length > 1) || (product.images && product.images.length > 0 && product.video)) && (
               <div className="prod-thumbnails">
                 {product.images.map((img, index) => (
                   <button
@@ -131,6 +143,26 @@ export default function ProductDetailPage({ params: paramsPromise }) {
                     />
                   </button>
                 ))}
+
+                {product.video && (
+                  <button
+                    className={`prod-thumbBtn prod-videoThumbBtn ${activeImage === 'video' ? 'prod-thumbActive' : ''}`}
+                    onClick={() => setActiveImage('video')}
+                  >
+                    {product.images && product.images[0] && (
+                      <Image
+                        src={product.images[0]}
+                        alt={`${product.name} video thumbnail`}
+                        fill
+                        sizes="80px"
+                        className="prod-thumbImage"
+                      />
+                    )}
+                    <div className="prod-videoThumbOverlay">
+                      <IoPlay className="prod-videoThumbPlayIcon" />
+                    </div>
+                  </button>
+                )}
               </div>
             )}
           </div>
