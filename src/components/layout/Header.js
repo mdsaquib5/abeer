@@ -72,7 +72,7 @@ export default function Header() {
               <Link href="/" className="hdr-logo">
                 ABEER
               </Link>
-              <span className="hdr-tagline">Labels</span>
+              <span className="hdr-tagline">अबीर</span>
             </div>
 
             {/* Right Cart Icon */}

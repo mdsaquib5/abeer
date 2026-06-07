@@ -1,6 +1,4 @@
-/* ==========================================
-   Component & Page Styles (Module-Based CSS replacement)
-   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap');
 
 @media (max-width: 576px) {}
 
@@ -2156,7 +2154,8 @@
 }
 
 .hdr-tagline {
-  font-family: var(--font-accent);
+  font-family: "Khand", sans-serif;
+  font-weight: 500;
   color: var(--accent);
   font-size: 1.15rem;
   letter-spacing: 0.02em;
@@ -2438,8 +2437,8 @@
 
 .cat-circleOuter {
   position: relative;
-  width: 175px;
-  height: 175px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
   border: 1px solid var(--border-color);
   padding: 8px;
@@ -2852,7 +2851,7 @@
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 60px;
-  
+
   align-items: center;
 }
 
@@ -2919,8 +2918,9 @@
 .hero-collageCard {
   position: absolute;
   background-color: var(--bg-ivory);
-  border: 1px solid var(--border-color);
-  padding: 8px; /* Passport photo style frame padding */
+  /* border: 1px solid var(--border-color); */
+  /* padding: 8px; */
+  /* Passport photo style frame padding */
   border-radius: 4px;
   box-shadow: 0 12px 30px rgba(77, 38, 24, 0.08);
   overflow: hidden;
@@ -2989,7 +2989,8 @@
   font-size: 1.15rem;
   letter-spacing: 0.05em;
   margin-bottom: 2px;
-  color: var(--primary); /* Gold color accent */
+  color: var(--primary);
+  /* Gold color accent */
 }
 
 .hero-collageBrand {
@@ -3553,11 +3554,83 @@
   background-color: var(--bg-beige);
 } */
 
-.reels-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+.reels-sliderWrapper {
+  position: relative;
   width: 100%;
+  padding-inline: 40px;
+}
+
+.reels-swiperContainer {
+  padding-bottom: 50px !important;
+  width: 100%;
+}
+
+.reels-swiperSlide {
+  height: auto;
+}
+
+.reels-navArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--bg-ivory);
+  border: 1px solid var(--border-color);
+  color: var(--secondary);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.reels-navArrow:hover {
+  background-color: var(--secondary);
+  color: var(--bg-ivory);
+  border-color: var(--secondary);
+}
+
+.reels-swiperButtonPrev {
+  left: -10px;
+}
+
+.reels-swiperButtonNext {
+  right: -10px;
+}
+
+.reels-swiperPagination {
+  position: absolute;
+  bottom: 10px;
+  left: 50% !important;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  z-index: 10;
+  width: auto !important;
+}
+
+.reels-swiperBullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+}
+
+.reels-swiperBulletActive {
+  background-color: var(--secondary);
+  opacity: 1;
+  width: 20px;
+  border-radius: 4px;
 }
 
 .reels-card {
@@ -3654,20 +3727,18 @@
   opacity: 0.7;
 }
 
-@media (max-width: 1200px) {
-  .reels-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+@media (max-width: 768px) {
+  .reels-sliderWrapper {
+    padding-inline: 0;
+  }
+
+  .reels-swiperButtonPrev,
+  .reels-swiperButtonNext {
+    display: none;
   }
 }
 
 @media (max-width: 576px) {
-  .reels-grid {
-    grid-template-columns: 1fr;
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
   .reels-overlay {
     padding: 16px;
   }

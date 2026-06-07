@@ -2,33 +2,45 @@
 
 import React, { useRef, useState } from 'react';
 import { IoVolumeMuteOutline, IoVolumeHighOutline, IoPlayOutline, IoPauseOutline } from 'react-icons/io5';
-;
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
 import SectionTitle from '../ui/SectionTitle';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const reelsData = [
   {
     id: 1,
     title: "Floral Affairé",
-    subtitle: "Launching June 15",
-    videoSrc: "/2nd Collection- Nargis.mp4",
+    subtitle: "Nargís Collection",
+    videoSrc: "/nargis.mp4",
   },
   {
     id: 2,
     title: "Qala Editorial",
     subtitle: "Solid Ivory Dress",
-    videoSrc: "/qala-one-pirce-ethenic-dress/IMG_0436.MOV",
+    videoSrc: "/qala-one-pirce-ethenic-dress/video-8.mov",
   },
   {
     id: 3,
     title: "Geet Lookbook",
-    subtitle: "Basant Bahaar",
-    videoSrc: "/geet-kurta-set-2pc/IMG_8635.mov",
+    subtitle: "Basant Bahaar Farshi",
+    videoSrc: "/geet-kurta-set-2pc/video-1.mov",
   },
   {
     id: 4,
     title: "Hania Movement",
-    subtitle: "Slow Crafted Rust",
-    videoSrc: "/hania-kurta-set/IMG_0527.MOV",
+    subtitle: "Slow Crafted Rust Farshi",
+    videoSrc: "/hania-kurta-set-2pc/video-3.mov",
+  },
+  {
+    id: 5,
+    title: "Geet Kurti",
+    subtitle: "Summer Mint Green",
+    videoSrc: "/geet-kurta-set-2pc/video-2.mov",
   }
 ];
 
@@ -65,7 +77,7 @@ function ReelCard({ reel }) {
         autoPlay
         playsInline
       />
-      
+
       {/* Video controls overlays */}
       <div className="reels-overlay">
         <div className="reels-meta">
@@ -90,15 +102,59 @@ export default function ReelsSection() {
   return (
     <section className="reels-section">
       <div className="container">
-        <SectionTitle 
-          title="The Abeer Muse" 
-          subtitle="Wear Your Soul in Motion" 
+        <SectionTitle
+          title="The Abeer Muse"
+          subtitle="Wear Your Soul in Motion"
         />
-        
-        <div className="reels-grid">
-          {reelsData.map((reel) => (
-            <ReelCard key={reel.id} reel={reel} />
-          ))}
+
+        <div className="reels-sliderWrapper">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation={{
+              nextEl: `.reels-swiperButtonNext`,
+              prevEl: `.reels-swiperButtonPrev`,
+            }}
+            pagination={{
+              clickable: true,
+              el: `.reels-swiperPagination`,
+              bulletClass: 'reels-swiperBullet',
+              bulletActiveClass: 'reels-swiperBulletActive'
+            }}
+            breakpoints={{
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 24,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+              },
+            }}
+            className="reels-swiperContainer"
+          >
+            {reelsData.map((reel) => (
+              <SwiperSlide key={reel.id} className="reels-swiperSlide">
+                <ReelCard reel={reel} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Custom Editorial Slider Navigation Controls */}
+          <button className={`reels-swiperButtonPrev reels-navArrow`} aria-label="Previous slide">
+            <span>←</span>
+          </button>
+          <button className={`reels-swiperButtonNext reels-navArrow`} aria-label="Next slide">
+            <span>→</span>
+          </button>
+
+          {/* Pagination container */}
+          <div className="reels-swiperPagination"></div>
         </div>
       </div>
     </section>

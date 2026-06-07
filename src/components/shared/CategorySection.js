@@ -11,16 +11,16 @@ export default function CategorySection() {
   return (
     <section className="cat-section">
       <div className="container">
-        <SectionTitle 
-          title="Shop By Category" 
-          subtitle="Explore the Silhouettes" 
+        <SectionTitle
+          title="Shop By Category"
+          subtitle="Explore the Silhouettes"
         />
-        
+
         <div className="cat-flexContainer">
           {categories.map((cat) => (
-            <Link 
-              key={cat.id} 
-              href={`/shop?category=${cat.id}`} 
+            <Link
+              key={cat.id}
+              href={`/shop/`}
               className="cat-card"
             >
               <div className="cat-circleOuter">
@@ -35,7 +35,7 @@ export default function CategorySection() {
                 </div>
               </div>
               <h3 className="cat-name">{cat.name}</h3>
-              <span className="cat-exploreLink">Explore ❀</span>
+              <span className="cat-exploreLink">Explore</span>
             </Link>
           ))}
         </div>

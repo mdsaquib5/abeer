@@ -20,7 +20,7 @@ export default function CollectionSection() {
           <div className={`colsec-card colsec-leftCard`}>
             <div className="colsec-imageContainer">
               <Image
-                src="/Profile pic for Basant bahaar collection.JPG"
+                src="/basant-bahar.jpg"
                 alt="Basant Bahaar Collection"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -45,7 +45,7 @@ export default function CollectionSection() {
           <div className={`colsec-card colsec-rightCard`}>
             <div className="colsec-imageContainer">
               <Image
-                src="/Profile pic for nargis collection.JPG"
+                src="/nargis-profile.jpg"
                 alt="Floral Affairé — NARGÍS Collection"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

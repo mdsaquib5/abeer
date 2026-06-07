@@ -8,14 +8,14 @@ export const products = [
     collection: "Basant Bahaar",
     aspectRatio: "landscape", // 4:3
     images: [
-      "/qala-one-pirce-ethenic-dress/IMG_0416.jpg",
-      "/qala-one-pirce-ethenic-dress/IMG_0440.jpg",
-      "/qala-one-pirce-ethenic-dress/IMG_0444.jpg",
-      "/qala-one-pirce-ethenic-dress/IMG_0448.jpg",
-      "/qala-one-pirce-ethenic-dress/IMG_0451.jpg",
-      "/qala-one-pirce-ethenic-dress/IMG_0452.jpg"
+      "/qala-one-pirce-ethenic-dress/image-1.jpg",
+      "/qala-one-pirce-ethenic-dress/image-2.jpg",
+      "/qala-one-pirce-ethenic-dress/image-3.jpg",
+      "/qala-one-pirce-ethenic-dress/image-4.jpg",
+      "/qala-one-pirce-ethenic-dress/image-5.jpg",
+      "/qala-one-pirce-ethenic-dress/image-6.jpg"
     ],
-    video: "/qala-one-pirce-ethenic-dress/IMG_0436.MOV",
+    video: "/qala-one-pirce-ethenic-dress/video-8.mov",
     composition: "100% Mal-Chander (40% Pure Silk + 60% Pure Cotton)",
     lining: "Included (Cotton Malmal)",
     fit: "Flowy A-Line Fit",
@@ -34,14 +34,14 @@ export const products = [
     collection: "Basant Bahaar",
     aspectRatio: "portrait", // 3:4
     images: [
-      "/geet-kurta-set-2pc/IMG_0586.jpg",
-      "/geet-kurta-set-2pc/IMG_0588.jpg",
-      "/geet-kurta-set-2pc/IMG_0593.jpg",
-      "/geet-kurta-set-2pc/IMG_0602.jpg",
-      "/geet-kurta-set-2pc/IMG_0603.jpg",
-      "/geet-kurta-set-2pc/IMG_0625.jpg"
+      "/geet-kurta-set-2pc/image-2.jpg",
+      "/geet-kurta-set-2pc/image-4.jpg",
+      "/geet-kurta-set-2pc/image-6.jpg",
+      "/geet-kurta-set-2pc/image-8.jpg",
+      "/geet-kurta-set-2pc/image-10.jpg",
+      "/geet-kurta-set-2pc/image-12.jpg"
     ],
-    video: "/geet-kurta-set-2pc/IMG_8635.mov",
+    video: "/geet-kurta-set-2pc/video-1.mov",
     composition: "100% Mal-Chander (Kurtis) & Premium Shantoon (Farshi)",
     lining: "Included",
     fit: "Flowy Relaxed Fit",
@@ -60,18 +60,18 @@ export const products = [
     collection: "Basant Bahaar",
     aspectRatio: "landscape", // 4:3
     images: [
-      "/hania-kurta-set-2pc/IMG_0499.jpg",
-      "/hania-kurta-set-2pc/IMG_0500.jpg",
-      "/hania-kurta-set-2pc/IMG_0504.jpg",
-      "/hania-kurta-set-2pc/IMG_0505.jpg",
-      "/hania-kurta-set-2pc/IMG_0507.jpg",
-      "/hania-kurta-set-2pc/IMG_0508.jpg",
-      "/hania-kurta-set-2pc/IMG_0509.jpg",
-      "/hania-kurta-set-2pc/IMG_0510.jpg",
-      "/hania-kurta-set-2pc/IMG_0511.jpg",
-      "/hania-kurta-set-2pc/IMG_0528.jpg"
+      "/hania-kurta-set-2pc/image-1.jpg",
+      "/hania-kurta-set-2pc/image-2.jpg",
+      "/hania-kurta-set-2pc/image-3.jpg",
+      "/hania-kurta-set-2pc/image-4.jpg",
+      "/hania-kurta-set-2pc/image-5.jpg",
+      "/hania-kurta-set-2pc/image-6.jpg",
+      "/hania-kurta-set-2pc/image-7.jpg",
+      "/hania-kurta-set-2pc/image-8.jpg",
+      "/hania-kurta-set-2pc/image-9.jpg",
+      "/hania-kurta-set-2pc/image-10.jpg"
     ],
-    video: "/hania-kurta-set-2pc/IMG_0527.MOV",
+    video: "/hania-kurta-set-2pc/video-3.mov",
     composition: "100% Mal-Chander (Kurtis) & Premium Shantoon (Farshi)",
     lining: "Included",
     fit: "Flowy Relaxed Fit",
@@ -90,12 +90,12 @@ export const products = [
     collection: "Basant Bahaar",
     aspectRatio: "portrait", // 3:4
     images: [
-      "/geet-kurta-set-2pc/IMG_0593.jpg",
-      "/geet-kurta-set-2pc/IMG_0602.jpg",
-      "/geet-kurta-set-2pc/IMG_0603.jpg",
-      "/geet-kurta-set-2pc/IMG_0586.jpg"
+      "/geet-kurta-set-2pc/image-6.jpg",
+      "/geet-kurta-set-2pc/image-8.jpg",
+      "/geet-kurta-set-2pc/image-10.jpg",
+      "/geet-kurta-set-2pc/image-2.jpg"
     ],
-    video: "/geet-kurta-set-2pc/IMG_8640.mov",
+    video: "/geet-kurta-set-2pc/video-2.mov",
     composition: "100% Mal-Chander (40% Pure Silk + 60% Pure Cotton)",
     lining: "Included",
     fit: "Flowy Relaxed Fit",
@@ -114,13 +114,13 @@ export const products = [
     collection: "Basant Bahaar",
     aspectRatio: "landscape", // 4:3
     images: [
-      "/hania-kurta-set/IMG_0508.JPG",
-      "/hania-kurta-set/IMG_0509.JPG",
-      "/hania-kurta-set/IMG_0510.JPG",
-      "/hania-kurta-set/IMG_0511.JPG",
-      "/hania-kurta-set/IMG_0528.JPG"
+      "/hania-kurta-set-2pc/image-6.jpg",
+      "/hania-kurta-set-2pc/image-7.jpg",
+      "/hania-kurta-set-2pc/image-8.jpg",
+      "/hania-kurta-set-2pc/image-9.jpg",
+      "/hania-kurta-set-2pc/image-10.jpg"
     ],
-    video: "/hania-kurta-set/IMG_0527.MOV",
+    video: "/hania-kurta-set-2pc/video-5.mov",
     composition: "100% Mal-Chander (40% Pure Silk + 60% Pure Cotton)",
     lining: "Included",
     fit: "Flowy Relaxed Fit",
@@ -139,8 +139,8 @@ export const products = [
     collection: "Basant Bahaar",
     aspectRatio: "portrait", // 3:4
     images: [
-      "/geet-kurta-set-2pc/IMG_0625.jpg",
-      "/hania-kurta-set-2pc/IMG_0500.jpg"
+      "/geet-kurta-set-2pc/image-12.jpg",
+      "/hania-kurta-set-2pc/image-2.jpg"
     ],
     video: null,
     composition: "Premium Shantoon",
@@ -161,7 +161,7 @@ export const collections = [
     tagline: "❀ Wear Your Soul ❀",
     description: "A celebration of ethnic roots and modern Y2K nostalgia. Tailored flowy silhouettes, hand embroidered motifs, and premium breathable fabrics.",
     status: "active",
-    image: "/Profile pic for Basant bahaar collection.JPG"
+    image: "/basant-bahar.jpg"
   },
   {
     id: "floral-affaire-nargis",
@@ -170,14 +170,14 @@ export const collections = [
     description: "Sensory tales of handwoven textures and romantic summer prints. An upcoming narrative of organic luxury.",
     status: "coming-soon",
     launchDate: "15 June 2026",
-    image: "/Profile pic for nargis collection.JPG"
+    image: "/nargis-profile.jpg"
   }
 ];
 
 export const categories = [
-  { id: "kurti-sets", name: "Kurti Sets", slug: "kurti-sets", image: "/geet-kurta-set-2pc/IMG_0593.jpg" },
-  { id: "farshi-sets", name: "Farshi Sets", slug: "farshi-sets", image: "/hania-kurta-set-2pc/IMG_0505.jpg" },
-  { id: "ethnic-dresses", name: "Ethnic Dresses", slug: "ethnic-dresses", image: "/qala-one-pirce-ethenic-dress/IMG_0416.jpg" },
-  { id: "new-arrivals", name: "New Arrivals", slug: "new-arrivals", image: "/geet-kurta-set-2pc/IMG_0586.jpg" },
-  { id: "coming-soon", name: "Coming Soon", slug: "coming-soon", image: "/Profile pic for nargis collection.JPG" }
+  { id: "kurti-sets", name: "Kurti Sets", slug: "kurti-sets", image: "/geet-kurta-set-2pc/image-6.jpg" },
+  { id: "farshi-sets", name: "Farshi Sets", slug: "farshi-sets", image: "/hania-kurta-set-2pc/image-4.jpg" },
+  { id: "ethnic-dresses", name: "Ethnic Dresses", slug: "ethnic-dresses", image: "/qala-one-pirce-ethenic-dress/image-1.jpg" },
+  { id: "new-arrivals", name: "New Arrivals", slug: "new-arrivals", image: "/geet-kurta-set-2pc/image-2.jpg" },
+  { id: "coming-soon", name: "Coming Soon", slug: "coming-soon", image: "/nargis-profile.jpg" }
 ];

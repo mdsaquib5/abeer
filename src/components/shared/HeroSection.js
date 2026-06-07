@@ -91,37 +91,37 @@ export default function HeroSection() {
 
   const collageItems = [
     {
-      id: "ethnic-dresses",
+      id: "/shop",
       name: "Ethnic Dresses",
-      image: "/qala-one-pirce-ethenic-dress/IMG_0416.jpg",
+      image: "/qala-one-pirce-ethenic-dress/image-1.jpg",
       className: "hero-cardMain",
       variants: cardVariantsMain
     },
     {
-      id: "kurti-sets",
+      id: "/shop",
       name: "Kurti Sets",
-      image: "/geet-kurta-set-2pc/IMG_0593.jpg",
+      image: "/geet-kurta-set-2pc/image-4.jpg",
       className: "hero-cardTopLeft",
       variants: cardVariantsTopLeft
     },
     {
-      id: "new-arrivals",
+      id: "/shop",
       name: "New Arrivals",
-      image: "/geet-kurta-set-2pc/IMG_0586.jpg",
+      image: "/geet-kurta-set-2pc/image-2.jpg",
       className: "hero-cardTopRight",
       variants: cardVariantsTopRight
     },
     {
-      id: "coming-soon",
+      id: "/shop",
       name: "Coming Soon",
-      image: "/Profile pic for nargis collection.JPG",
+      image: "/hania-kurta-set-2pc/image-14.jpg",
       className: "hero-cardBottomLeft",
       variants: cardVariantsBottomLeft
     },
     {
-      id: "farshi-sets",
+      id: "/shop",
       name: "Farshi Sets",
-      image: "/hania-kurta-set-2pc/IMG_0505.jpg",
+      image: "/hania-kurta-set-2pc/image-1.jpg",
       className: "hero-cardMiddleRight",
       variants: cardVariantsMiddleRight
     }
@@ -159,10 +159,7 @@ export default function HeroSection() {
 
             <motion.div className="hero-ctas" variants={itemVariants}>
               <Link href="/shop?collection=basant-bahaar">
-                <Button variant="primary">Explore Collection</Button>
-              </Link>
-              <Link href="/shop">
-                <Button variant="secondary">Shop Now</Button>
+                <Button variant="primary">Shop Now</Button>
               </Link>
             </motion.div>
           </motion.div>
@@ -177,7 +174,7 @@ export default function HeroSection() {
             <div className="hero-collageContainer">
               {collageItems.map((item) => (
                 <motion.div
-                  key={item.id}
+                  key={item.name}
                   className={`hero-collageCard ${item.className}`}
                   variants={item.variants}
                   whileHover={{
@@ -199,12 +196,9 @@ export default function HeroSection() {
                         className="hero-collageImage"
                       />
                     </div>
-                    {/* Subtle, premium dark gradient label */}
                     <div className="hero-collageOverlay">
                       <div className="hero-collageLabelContent">
                         <span className="hero-collageCat">{item.name}</span>
-                        <span className="hero-collageBrand">ABEER</span>
-                        <span className="hero-collageAction">Explore ❀</span>
                       </div>
                     </div>
                   </Link>
