@@ -1,0 +1,117 @@
+:root {
+  /* Brand Color Palette */
+  --primary: #e4cfb7;
+  --secondary: #4d2618;
+  --bg-ivory: #fffaf5;
+  --bg-beige: #f5eee7;
+  --accent: #7f5d4e;
+  --text-dark: #2d1a12;
+  --text-muted: #6b5247;
+  --white: #ffffff;
+  --border-color: #e8ded4;
+  --border-light: rgba(77, 38, 24, 0.1);
+
+  /* Layout dimensions */
+  --container-padding: 24px;
+  --header-height: 90px;
+}
+
+/* Base resets & typography */
+body {
+  /* Fonts (configured via root layout variables) */
+  --font-logo: var(--font-cinzel), 'Cinzel', serif;
+  --font-heading: var(--font-cormorant), 'Cormorant Garamond', serif;
+  --font-body: var(--font-manrope), 'Manrope', sans-serif;
+  --font-accent: var(--font-parisienne), 'Parisienne', cursive;
+
+  font-family: var(--font-body);
+  background-color: var(--bg-ivory);
+  color: var(--text-dark);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+p {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+a {
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+/* Global scrollbar style for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Utility classes for luxury branding */
+.accent-text {
+  font-family: var(--font-accent);
+  color: var(--accent);
+  font-size: 2.2rem;
+  line-height: 1.2;
+}
+
+.luxury-card {
+  background-color: var(--bg-ivory);
+  border: 1px solid var(--border-color);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(77, 38, 24, 0.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
