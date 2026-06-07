@@ -2422,7 +2422,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 48px;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -2437,8 +2437,8 @@
 
 .cat-circleOuter {
   position: relative;
-  width: 220px;
-  height: 220px;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
   border: 1px solid var(--border-color);
   padding: 8px;

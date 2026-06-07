@@ -176,8 +176,7 @@ export const collections = [
 
 export const categories = [
   { id: "kurti-sets", name: "Kurti Sets", slug: "kurti-sets", image: "/geet-kurta-set-2pc/image-6.jpg" },
-  { id: "farshi-sets", name: "Farshi Sets", slug: "farshi-sets", image: "/hania-kurta-set-2pc/image-4.jpg" },
+  { id: "farshi-sets", name: "Farshi Sets", slug: "farshi-sets", image: "/hania-kurta-set-2pc/image-14.jpg" },
   { id: "ethnic-dresses", name: "Ethnic Dresses", slug: "ethnic-dresses", image: "/qala-one-pirce-ethenic-dress/image-1.jpg" },
-  { id: "new-arrivals", name: "New Arrivals", slug: "new-arrivals", image: "/geet-kurta-set-2pc/image-2.jpg" },
-  { id: "coming-soon", name: "Coming Soon", slug: "coming-soon", image: "/nargis-profile.jpg" }
+  { id: "new-arrivals", name: "New Arrivals", slug: "new-arrivals", image: "/nargis-profile.jpg" },
 ];

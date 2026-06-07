@@ -86,7 +86,7 @@ function ReelCard({ reel }) {
         </div>
 
         <div className="reels-controls">
-          <button className="reels-controlBtn" onClick={toggleMute} aria-label={isMuted ? "Unmute" : "Mute"}>
+          <button className="reels-controlBtn" onClick={toggleMute} aria-label={isMuted ? "Unmute" : "Mute"} style={{ display: 'none' }}>
             {isMuted ? <IoVolumeMuteOutline /> : <IoVolumeHighOutline />}
           </button>
           <div className="reels-playStateIcon">
