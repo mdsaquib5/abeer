@@ -14,30 +14,24 @@ import 'swiper/css/pagination';
 const reelsData = [
   {
     id: 1,
-    title: "Floral Affairé",
-    subtitle: "Nargís Collection",
-    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861644/nargis_rsodyq.mp4",
-  },
-  {
-    id: 2,
     title: "Qala Editorial",
     subtitle: "Solid Ivory Dress",
     videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861762/video-8_anklft.mp4",
   },
   {
-    id: 3,
+    id: 2,
     title: "Geet Lookbook",
     subtitle: "Basant Bahaar Farshi",
     videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861949/video-1_bndukx.mp4",
   },
   {
-    id: 4,
+    id: 3,
     title: "Hania Movement",
     subtitle: "Slow Crafted Rust Farshi",
     videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861868/video-5_fhyl9z.mp4",
   },
   {
-    id: 5,
+    id: 4,
     title: "Geet Kurti",
     subtitle: "Summer Mint Green",
     videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861937/video-2_kn6xce.mp4",
