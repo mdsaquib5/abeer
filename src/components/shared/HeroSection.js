@@ -113,7 +113,7 @@ export default function HeroSection() {
     },
     {
       id: "/shop",
-      name: "Coming Soon",
+      name: "Hania Kurta",
       image: "/hania-kurta-set-2pc/image-14.jpg",
       className: "hero-cardBottomLeft",
       variants: cardVariantsBottomLeft
@@ -129,7 +129,6 @@ export default function HeroSection() {
 
   return (
     <div className="hero-hero">
-      {/* Floating floral accents */}
       <div className={`hero-flower hero-f1`}>❀</div>
       <div className={`hero-flower hero-f2`}>❀</div>
       <div className={`hero-flower hero-f3`}>❀</div>
@@ -144,7 +143,7 @@ export default function HeroSection() {
             variants={containerVariants}
           >
             <motion.span className="hero-welcome" variants={itemVariants}>
-              Abeer Label
+              Abeer Labels
             </motion.span>
 
             <motion.h1 className="hero-headline" variants={itemVariants}>
