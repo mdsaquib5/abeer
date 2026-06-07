@@ -22,25 +22,25 @@ const reelsData = [
     id: 2,
     title: "Qala Editorial",
     subtitle: "Solid Ivory Dress",
-    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861762/video-8_anklft.mov",
+    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861762/video-8_anklft.mp4",
   },
   {
     id: 3,
     title: "Geet Lookbook",
     subtitle: "Basant Bahaar Farshi",
-    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861949/video-1_bndukx.mov",
+    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861949/video-1_bndukx.mp4",
   },
   {
     id: 4,
     title: "Hania Movement",
     subtitle: "Slow Crafted Rust Farshi",
-    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861868/video-5_fhyl9z.mov",
+    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861868/video-5_fhyl9z.mp4",
   },
   {
     id: 5,
     title: "Geet Kurti",
     subtitle: "Summer Mint Green",
-    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861937/video-2_kn6xce.mov",
+    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861937/video-2_kn6xce.mp4",
   }
 ];
 
@@ -76,9 +76,9 @@ function ReelCard({ reel }) {
         muted={isMuted}
         autoPlay
         playsInline
+        preload="metadata"
       />
 
-      {/* Video controls overlays */}
       <div className="reels-overlay">
         <div className="reels-meta">
           <span className="reels-subtitle">{reel.subtitle}</span>
@@ -124,11 +124,11 @@ export default function ReelsSection() {
             }}
             breakpoints={{
               480: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 20,
               },
               768: {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 24,
               },
               1024: {

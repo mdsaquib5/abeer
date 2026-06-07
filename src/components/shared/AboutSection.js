@@ -52,6 +52,7 @@ export default function AboutSection() {
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="about-image"
+                priority
               />
               <div className="about-ornament">❀</div>
             </div>
