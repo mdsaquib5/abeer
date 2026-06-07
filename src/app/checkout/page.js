@@ -24,7 +24,7 @@ export default function CheckoutPage() {
   const [zipCode, setZipCode] = useState('');
 
   // Payment State
-  const [paymentMethod, setPaymentMethod] = useState('card');
+  const [paymentMethod, setPaymentMethod] = useState('upi');
 
   useEffect(() => {
     setMounted(true);
@@ -201,15 +201,16 @@ export default function CheckoutPage() {
               </p>
               
               <div className="chk-paymentOptions">
-                <label className={`chk-paymentLabel ${paymentMethod === 'card' ? 'chk-paymentLabelActive' : ''}`}>
+                <label className={`chk-paymentLabel ${paymentMethod === 'card' ? 'chk-paymentLabelActive' : ''}`} style={{ opacity: 0.6, cursor: 'not-allowed' }}>
                   <input
                     type="radio"
                     name="payment"
                     value="card"
                     checked={paymentMethod === 'card'}
                     onChange={() => setPaymentMethod('card')}
+                    disabled
                   />
-                  Credit / Debit Card
+                  Credit / Debit Card (Temporarily Unavailable)
                 </label>
                 <label className={`chk-paymentLabel ${paymentMethod === 'upi' ? 'chk-paymentLabelActive' : ''}`}>
                   <input
@@ -221,21 +222,21 @@ export default function CheckoutPage() {
                   />
                   UPI (GPay / PhonePe / Paytm)
                 </label>
-                <label className={`chk-paymentLabel ${paymentMethod === 'netbanking' ? 'chk-paymentLabelActive' : ''}`}>
+                <label className={`chk-paymentLabel ${paymentMethod === 'netbanking' ? 'chk-paymentLabelActive' : ''}`} style={{ opacity: 0.6, cursor: 'not-allowed' }}>
                   <input
                     type="radio"
                     name="payment"
                     value="netbanking"
                     checked={paymentMethod === 'netbanking'}
                     onChange={() => setPaymentMethod('netbanking')}
+                    disabled
                   />
-                  Net Banking
+                  Net Banking (Temporarily Unavailable)
                 </label>
               </div>
             </div>
           </div>
 
-          {/* Right: Order Summary Sidebar */}
           <div className="chk-summaryContainer">
             <h3 className="chk-summaryTitle">Your Order</h3>
             

@@ -25,7 +25,7 @@ function ShopContent() {
 
   // Available options
   const collections = ['all', 'basant-bahaar', 'floral-affaire-nargis'];
-  const categoriesList = ['all', 'kurti-sets', 'farshi-sets', 'ethnic-dresses', 'new-arrivals', 'coming-soon'];
+  const categoriesList = ['all', 'kurta-sets', 'farshi-sets', 'ethnic-dresses', 'new-arrivals', 'coming-soon'];
   const sizes = ['XS', 'S', 'M', 'L', 'XL', '2XL'];
 
   // Handle updates to query params
@@ -264,8 +264,8 @@ function ShopContent() {
           <div className="shop-drawerContainer">
             <div className="shop-drawerHeader">
               <h3 className="shop-drawerTitle">Filters</h3>
-              <button 
-                className="shop-drawerClose" 
+              <button
+                className="shop-drawerClose"
                 onClick={() => setIsMobileFilterOpen(false)}
               >
                 <IoCloseOutline />
@@ -275,7 +275,7 @@ function ShopContent() {
               {sidebarContent}
             </div>
             <div className="shop-drawerFooter">
-              <button 
+              <button
                 className="shop-applyBtn"
                 onClick={() => setIsMobileFilterOpen(false)}
               >

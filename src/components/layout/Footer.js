@@ -57,7 +57,7 @@ export default function Footer() {
               </li>
               <li>
                 <span className="ftr-contactLabel">Email:</span>
-                <a href="mailto:write@abeerlabel.com" className="ftr-contactValue">
+                <a href="mailto:write@abeerlabel.com" target="_blank" rel="noopener noreferrer" className="ftr-contactValue">
                   write@abeerlabel.com
                 </a>
               </li>
@@ -69,7 +69,7 @@ export default function Footer() {
               <a href="https://www.instagram.com/abeer.label/" target="_blank" rel="noopener noreferrer" className="ftr-socialLink" aria-label="Instagram">
                 <IoLogoInstagram />
               </a>
-              <a href="mailto:write@abeerlabel.com" className="ftr-socialLink" aria-label="Email">
+              <a href="mailto:write@abeerlabel.com" target="_blank" rel="noopener noreferrer" className="ftr-socialLink" aria-label="Email">
                 <IoMailOutline />
               </a>
             </div>
