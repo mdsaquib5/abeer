@@ -73,7 +73,7 @@ export default function DrawerMenu({ isOpen, onClose }) {
             </nav>
 
             <div className="drm-footer">
-              <p className="drm-tagline">Wear Your Soul</p>
+              <p className="drm-tagline">Desi Maximalism</p>
               <div className="drm-socials">
                 <a href="https://wa.me/918076006802" target="_blank" rel="noopener noreferrer" className="drm-socialIcon" aria-label="WhatsApp">
                   <IoLogoWhatsapp />

@@ -15,7 +15,7 @@ export default function Footer() {
               </Link>
               <span className="ftr-tagline">अबीर</span>
             </div>
-            <p className="ftr-cursiveTagline">Wear Your Soul</p>
+            <p className="ftr-cursiveTagline">Desi Maximalism</p>
             <p className="ftr-description">
               Abeer is a reflection of slow fashion, quiet luxury, and timeless design.
               We create consciously made pieces that remain relevant long after trends fade,

@@ -4165,11 +4165,11 @@
 }
 
 .drm-tagline {
-  font-family: "Khand", sans-serif;
-  font-weight: 500;
-  color: var(--accent);
+  font-family: "Khand", sans-serif !important;
+  font-weight: 500 !important;
+  color: var(--accent) !important;
   font-size: 1.15rem !important;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02em !important;
 }
 
 .drm-closeBtn {
