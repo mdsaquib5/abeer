@@ -11,7 +11,7 @@ export default function AboutSection() {
           {/* Left Column: Story text */}
           <div className="about-content">
             <span className="about-welcome">Founder's Message</span>
-            <h2 className="about-headline">Maryam Rehan's Vision</h2>
+            <h2 className="about-headline">Mariyam Rehan's Vision</h2>
 
             <div className="about-storyText">
               <p>
@@ -38,7 +38,7 @@ export default function AboutSection() {
             </div>
 
             <div className="about-quoteWrapper">
-              <span className="about-quote">- Maryam Rehan</span>
+              <span className="about-quote">- Mariyam Rehan</span>
               <span className="about-author">Founder</span>
             </div>
           </div>

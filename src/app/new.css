@@ -1058,6 +1058,33 @@
   text-align: center;
 }
 
+.success-buttonsGroup {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.success-whatsappBtn {
+  background-color: #25D366;
+  color: #ffffff;
+  padding: 14px 40px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.success-whatsappBtn:hover {
+  background-color: #128C7E;
+}
+
 .success-shopLink {
   background-color: var(--secondary);
   color: var(--bg-ivory);
@@ -4116,12 +4143,30 @@
   margin-bottom: 50px;
 }
 
+.drm-logoWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .drm-logo {
   font-family: var(--font-logo);
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: var(--secondary);
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  border-bottom: 1px solid var(--secondary);
+  line-height: 1;
+}
+
+.drm-tagline {
+  font-family: "Khand", sans-serif;
+  font-weight: 500;
+  color: var(--accent);
+  font-size: 1.15rem !important;
+  letter-spacing: 0.02em;
 }
 
 .drm-closeBtn {

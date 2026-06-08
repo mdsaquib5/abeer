@@ -50,11 +50,47 @@ export default function CheckoutPage() {
       shippingName: `${firstName} ${lastName}`,
       address: `${address}, ${city}, ${state} - ${zipCode}`,
       amount: subtotal,
-      items: items.map((i) => ({ name: i.product.name, size: i.size, qty: i.quantity }))
+      items: items.map((i) => ({ 
+        name: i.product.name, 
+        size: i.size, 
+        qty: i.quantity,
+        price: i.product.price 
+      }))
     };
     localStorage.setItem('abeer-last-order', JSON.stringify(orderDetails));
 
-    // Clear cart and redirect
+    // Construct the WhatsApp message details
+    const totalItems = items.reduce((acc, item) => acc + item.quantity, 0);
+    const itemDetailsText = items.map((item) => {
+      const itemPrice = item.product.price;
+      const itemSubtotal = itemPrice * item.quantity;
+      return `• *${item.product.name}*\n  Size: ${item.size}\n  Qty: ${item.quantity}\n  Price per item: ₹${itemPrice.toLocaleString('en-IN')}\n  Subtotal: ₹${itemSubtotal.toLocaleString('en-IN')}`;
+    }).join('\n\n');
+
+    const messageText = `*NEW ORDER - ABEER*\n` +
+      `--------------------------\n` +
+      `*Order ID:* ${orderId}\n` +
+      `*Name:* ${firstName} ${lastName}\n` +
+      `*Email:* ${email}\n` +
+      `*Phone:* ${phone}\n` +
+      `*Shipping Address:* ${address}, ${city}, ${state} - ${zipCode}\n\n` +
+      `*Order Summary:*\n${itemDetailsText}\n` +
+      `--------------------------\n` +
+      `*Total Items:* ${totalItems}\n` +
+      `*Total Amount:* ₹${subtotal.toLocaleString('en-IN')}\n\n` +
+      `_Please process my order. Thank you!_`;
+
+    const encodedMessage = encodeURIComponent(messageText);
+    const waUrl = `https://wa.me/918076006802?text=${encodedMessage}`;
+
+    // Open WhatsApp in a new tab
+    try {
+      window.open(waUrl, '_blank');
+    } catch (err) {
+      console.error('Failed to open WhatsApp tab:', err);
+    }
+
+    // Clear cart and redirect to success page
     clearCart();
     router.push('/order-success');
   };

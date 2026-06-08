@@ -40,7 +40,12 @@ export default function DrawerMenu({ isOpen, onClose }) {
             variants={menuVariants}
           >
             <div className="drm-header">
-              <span className="drm-logo">ABEER</span>
+              <div className="drm-logoWrapper">
+                <Link href="/" className="drm-logo" onClick={onClose}>
+                  ABEER
+                </Link>
+                <span className="drm-tagline">अबीर</span>
+              </div>
               <button className="drm-closeBtn" onClick={onClose} aria-label="Close menu">
                 <IoClose />
               </button>
@@ -73,14 +78,14 @@ export default function DrawerMenu({ isOpen, onClose }) {
                 <a href="https://wa.me/918076006802" target="_blank" rel="noopener noreferrer" className="drm-socialIcon" aria-label="WhatsApp">
                   <IoLogoWhatsapp />
                 </a>
-                <a href="https://instagram.com/abeers.label" target="_blank" rel="noopener noreferrer" className="drm-socialIcon" aria-label="Instagram">
+                <a href="https://www.instagram.com/abeer.label/" target="_blank" rel="noopener noreferrer" className="drm-socialIcon" aria-label="Instagram">
                   <IoLogoInstagram />
                 </a>
-                <a href="mailto:write@abeerlabel.com" className="drm-socialIcon" aria-label="Email">
+                <a href="mailto:write@abeerlabel.com" target="_blank" rel="noopener noreferrer" className="drm-socialIcon" aria-label="Email">
                   <IoMailOutline />
                 </a>
               </div>
-              <p className="drm-copyright">&copy; {new Date().getFullYear()} ABEER</p>
+              <p className="drm-copyright">&copy; {new Date().getFullYear()} Abeer.label</p>
             </div>
           </motion.div>
         </>

@@ -88,6 +88,35 @@ export const products = [
     description: "Bold rust tones meet soft traditional craftsmanship. Crafted from soft, breathable Mal-Chander, this set features a relaxed rust kurta embedded with delicate floral embroidery, complete with a flowing premium Shantoon salwar. For the desi muse who still pauses for poetry.",
     care: "Gentle dry clean. Iron with steam on low settings.",
     inStock: true
+  },
+  {
+    id: "noor-kurta-set",
+    name: "Noor Kurta Set",
+    price: 2999,
+    sizes: ["XS", "S", "M", "L", "XL", "2XL"],
+    category: "Kurti Sets",
+    collection: "Basant Bahaar",
+    aspectRatio: "landscape", // 4:3
+    images: [
+      "/noor-kurta-set/1.jpg",
+      "/noor-kurta-set/2.jpg",
+      "/noor-kurta-set/3.jpg",
+      "/noor-kurta-set/4.jpg",
+      "/noor-kurta-set/5.jpg",
+      "/noor-kurta-set/6.jpg",
+      "/noor-kurta-set/7.jpg",
+      "/noor-kurta-set/8.jpg",
+      "/size-chart.png"
+    ],
+    video: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780941029/noor-vode_wjthom.mp4",
+    composition: "100% Mal-Chander (Kurtis)",
+    lining: "Included",
+    fit: "Flowy Relaxed Fit",
+    print: "Solid Black shirt",
+    details: "Embroidered Floral Motifs on yoke and sleeves",
+    description: "Bold black tones meet soft traditional craftsmanship. Crafted from soft, breathable Mal-Chander, this set features a relaxed black kurta embedded with delicate floral embroidery, complete with a flowing premium Shantoon salwar. For the desi muse who still pauses for poetry.",
+    care: "Gentle dry clean. Iron with steam on low settings.",
+    inStock: true
   }
 ];
 

@@ -35,6 +35,12 @@ const reelsData = [
     title: "Geet Kurti",
     subtitle: "Summer Mint Green",
     videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861937/video-2_kn6xce.mp4",
+  },
+  {
+    id: 5,
+    title: "Noor Kurta",
+    subtitle: "Khadi Cotton",
+    videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780941251/IMG_0561_bzcbbg.mp4",
   }
 ];
 

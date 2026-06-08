@@ -17,6 +17,31 @@ export default function OrderSuccessPage() {
     }
   }, []);
 
+  const getWhatsAppLink = () => {
+    if (!orderDetails) return '#';
+    const totalItems = orderDetails.items.reduce((acc, item) => acc + item.qty, 0);
+    const itemDetailsText = orderDetails.items.map((item) => {
+      const itemPrice = item.price || 0;
+      const itemSubtotal = itemPrice * item.qty;
+      return `• *${item.name}*\n  Size: ${item.size}\n  Qty: ${item.qty}\n  Price per item: ₹${itemPrice.toLocaleString('en-IN')}\n  Subtotal: ₹${itemSubtotal.toLocaleString('en-IN')}`;
+    }).join('\n\n');
+
+    const messageText = `*NEW ORDER - ABEER*\n` +
+      `--------------------------\n` +
+      `*Order ID:* ${orderDetails.orderId}\n` +
+      `*Name:* ${orderDetails.shippingName}\n` +
+      `*Email:* ${orderDetails.email}\n` +
+      `*Phone:* ${orderDetails.phone}\n` +
+      `*Shipping Address:* ${orderDetails.address}\n\n` +
+      `*Order Summary:*\n${itemDetailsText}\n` +
+      `--------------------------\n` +
+      `*Total Items:* ${totalItems}\n` +
+      `*Total Amount:* ₹${orderDetails.amount.toLocaleString('en-IN')}\n\n` +
+      `_Please process my order. Thank you!_`;
+
+    return `https://wa.me/918076006802?text=${encodeURIComponent(messageText)}`;
+  };
+
   if (!mounted) {
     return (
       <div className="success-loading">
@@ -82,9 +107,21 @@ export default function OrderSuccessPage() {
           </div>
 
           <div className="success-footer">
-            <Link href="/shop" className="success-shopLink">
-              Continue Shopping
-            </Link>
+            <div className="success-buttonsGroup">
+              {orderDetails && (
+                <a 
+                  href={getWhatsAppLink()} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="success-whatsappBtn"
+                >
+                  Send Details to WhatsApp
+                </a>
+              )}
+              <Link href="/shop" className="success-shopLink">
+                Continue Shopping
+              </Link>
+            </div>
           </div>
         </div>
       </div>

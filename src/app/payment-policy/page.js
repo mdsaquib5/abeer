@@ -46,7 +46,7 @@ export default function PaymentPolicyPage() {
             </p>
             <p>
               Customization requests (length adjustments, sizing tweaks, pattern modifications) are accepted **only through 
-              Instagram DM (@abeers.label) or WhatsApp (+91 8076006802)** prior to ordering. 
+              Instagram DM (@abeer.label) or WhatsApp (+91 8076006802)** prior to ordering. 
               Customization charges start from a base fee of **₹200 onwards** depending on the alterations requested.
             </p>
           </div>
