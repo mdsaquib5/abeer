@@ -1951,7 +1951,8 @@
   font-family: var(--font-accent);
   color: var(--primary);
   font-size: 1.6rem;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 6px;
 }
 
 .ftr-description {
@@ -2672,6 +2673,12 @@
   line-height: 1.7;
   color: var(--text-muted);
   margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 3.4em;
 }
 
 /* Teaser Card Early Access Form */
@@ -2765,7 +2772,8 @@
   }
 
   .colsec-description {
-    min-height: auto;
+    height: auto;
+    -webkit-line-clamp: none;
   }
 }
 

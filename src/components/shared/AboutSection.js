@@ -10,36 +10,36 @@ export default function AboutSection() {
         <div className="about-grid">
           {/* Left Column: Story text */}
           <div className="about-content">
-            <span className="about-welcome">A Personal Note</span>
-            <h2 className="about-headline">Mariyam&apos;s Vision</h2>
-            
+            <span className="about-welcome">Founder's Message</span>
+            <h2 className="about-headline">Maryam Rehan's Vision</h2>
+
             <div className="about-storyText">
               <p>
-                Abeer is a reflection of slow fashion, quiet luxury, and timeless design. 
-                Born from a love for Indian craftsmanship, we create consciously made pieces 
+                Abeer is a reflection of slow fashion, quiet luxury, and timeless design.
+                Born from a love for Indian craftsmanship, we create consciously made pieces
                 that remain relevant long after trends fade.
               </p>
               <p>
-                Our designs carry the nostalgia of the Y2K era while embracing the ease and 
-                confidence of the modern woman. Abeer is for the desi muse who finds herself 
+                Our designs carry the nostalgia of the Y2K era while embracing the ease and
+                confidence of the modern woman. Abeer is for the desi muse who finds herself
                 between two worlds—somewhere between 2000 and 2026.
               </p>
               <p>
-                She loves ethnic wear but seeks a contemporary edge. She has a modern mindset 
-                yet a soft heart. She still pauses for poetry. Chooses chai over coffee. 
+                She loves ethnic wear but seeks a contemporary edge. She has a modern mindset
+                yet a soft heart. She still pauses for poetry. Chooses chai over coffee.
                 Prefers auto rides over luxury cars. Finds beauty in the little things.
               </p>
               <p>
-                Through thoughtful silhouettes, breathable fabrics, handcrafted details, 
-                and modern interpretations of traditional wear, we bring her vision to life. 
-                At Abeer, we don&apos;t just create clothes. We create pieces for women who carry 
+                Through thoughtful silhouettes, breathable fabrics, handcrafted details,
+                and modern interpretations of traditional wear, we bring her vision to life.
+                At Abeer, we don't just create clothes. We create pieces for women who carry
                 nostalgia in their hearts and confidence in their stride.
               </p>
             </div>
-            
+
             <div className="about-quoteWrapper">
-              <span className="about-quote">&mdash; Mariyam</span>
-              <span className="about-author">Founder &amp; Designer</span>
+              <span className="about-quote">- Maryam Rehan</span>
+              <span className="about-author">Founder</span>
             </div>
           </div>
 

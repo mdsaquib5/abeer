@@ -33,7 +33,7 @@ export default function CollectionSection() {
               <span className="colsec-accentText">Basant Bahaar</span>
               <h3 className="colsec-title">Reflections of Spring</h3>
               <p className="colsec-description">
-                A celebration of Indian craftsmanship and breathing space. Built with pure cotton and silk-blended Mal-Chander fabrics, this collection features the Geet Farshi Set, Hania Farshi Set, and Qala One Piece Dress.
+                A celebration of Indian craftsmanship and breathing space. Crafted from cotton-silk Mal-Chander, featuring the Geet, Hania, and Qala sets.
               </p>
               <Link href="/shop?collection=basant-bahaar">
                 <Button variant="primary">Shop Now</Button>
