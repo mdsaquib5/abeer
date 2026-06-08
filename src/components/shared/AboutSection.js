@@ -10,8 +10,8 @@ export default function AboutSection() {
         <div className="about-grid">
           {/* Left Column: Story text */}
           <div className="about-content">
-            <span className="about-welcome">Our Philosophy</span>
-            <h2 className="about-headline">The Abeer Narrative</h2>
+            <span className="about-welcome">A Personal Note</span>
+            <h2 className="about-headline">Mariyam&apos;s Vision</h2>
             
             <div className="about-storyText">
               <p>
@@ -38,8 +38,8 @@ export default function AboutSection() {
             </div>
             
             <div className="about-quoteWrapper">
-              <span className="about-quote">&ldquo;Wear Your Soul&rdquo;</span>
-              <span className="about-author">— For the modern desi muse</span>
+              <span className="about-quote">&mdash; Mariyam</span>
+              <span className="about-author">Founder &amp; Designer</span>
             </div>
           </div>
 
