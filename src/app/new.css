@@ -2596,7 +2596,7 @@
 .colsec-imageContainer {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 2 / 3;
   overflow: hidden;
   border-radius: 2px;
   margin-bottom: 24px;
