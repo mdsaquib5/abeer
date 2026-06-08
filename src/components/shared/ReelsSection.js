@@ -39,7 +39,7 @@ const reelsData = [
   {
     id: 5,
     title: "Noor Kurta",
-    subtitle: "Khadi Cotton",
+    subtitle: "Pastel Amber Orange",
     videoSrc: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780941251/IMG_0561_bzcbbg.mp4",
   }
 ];

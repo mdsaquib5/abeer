@@ -1067,7 +1067,7 @@
 
 .success-whatsappBtn {
   background-color: #25D366;
-  color: #ffffff;
+  color: #ffffff !important;
   padding: 14px 40px;
   font-family: var(--font-body);
   font-size: 0.85rem;
@@ -1076,18 +1076,18 @@
   letter-spacing: 0.1em;
   text-decoration: none;
   display: inline-block;
-  transition: background-color 0.3s ease;
   border: none;
   cursor: pointer;
 }
 
 .success-whatsappBtn:hover {
-  background-color: #128C7E;
+  background-color: #25D366 !important;
+  color: #ffffff !important;
 }
 
 .success-shopLink {
   background-color: var(--secondary);
-  color: var(--bg-ivory);
+  color: var(--bg-ivory) !important;
   padding: 14px 40px;
   font-family: var(--font-body);
   font-size: 0.85rem;
@@ -1096,11 +1096,11 @@
   letter-spacing: 0.1em;
   text-decoration: none;
   display: inline-block;
-  transition: background-color 0.3s ease;
 }
 
 .success-shopLink:hover {
-  background-color: var(--accent);
+  background-color: var(--secondary) !important;
+  color: var(--bg-ivory) !important;
 }
 
 @media (max-width: 768px) {
@@ -4027,6 +4027,9 @@
 
 .acc-content li {
   margin-bottom: 8px;
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
 }
 
 

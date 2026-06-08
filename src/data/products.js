@@ -92,7 +92,7 @@ export const products = [
   {
     id: "noor-kurta-set",
     name: "Noor Kurta Set",
-    price: 2999,
+    price: 4899,
     sizes: ["XS", "S", "M", "L", "XL", "2XL"],
     category: "Kurti Sets",
     collection: "Basant Bahaar",
@@ -109,12 +109,12 @@ export const products = [
       "/size-chart.png"
     ],
     video: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780941029/noor-vode_wjthom.mp4",
-    composition: "100% Mal-Chander (Kurtis)",
+    composition: "100% Mal-Chander (40% pure silk with 60% pure cotton)",
     lining: "Included",
-    fit: "Flowy Relaxed Fit",
-    print: "Solid Black shirt",
-    details: "Embroidered Floral Motifs on yoke and sleeves",
-    description: "Bold black tones meet soft traditional craftsmanship. Crafted from soft, breathable Mal-Chander, this set features a relaxed black kurta embedded with delicate floral embroidery, complete with a flowing premium Shantoon salwar. For the desi muse who still pauses for poetry.",
+    fit: "Flowy Straight fit",
+    print: "Solid Pastel Amber Orange with Straight pants in premium Shantoon fabric",
+    details: "Embroidered Ivory motif",
+    description: "Bold pastel amber orange tones meet soft traditional craftsmanship. Crafted from a premium blend of 100% Mal-Chander (40% pure silk with 60% pure cotton), this set features a flowy straight-fit kurta embedded with delicate embroidered ivory motifs, complete with straight pants in premium Shantoon fabric. For the desi muse who still pauses for poetry.",
     care: "Gentle dry clean. Iron with steam on low settings.",
     inStock: true
   }

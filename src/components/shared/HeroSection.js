@@ -143,7 +143,7 @@ export default function HeroSection() {
             variants={containerVariants}
           >
             <motion.span className="hero-welcome" variants={itemVariants}>
-              Abeer Label
+              Abeer.Label
             </motion.span>
 
             <motion.h1 className="hero-headline" variants={itemVariants}>
