@@ -731,6 +731,7 @@
   font-weight: 500;
   margin-bottom: 16px;
   letter-spacing: 0.04em;
+  color: var(--white);
   line-height: 1.15;
 }
 
@@ -764,7 +765,6 @@
   color: var(--text-muted);
   font-size: 0.95rem;
   line-height: 1.6;
-  margin-bottom: 24px;
 }
 
 .col-notifyForm {
@@ -2540,21 +2540,6 @@
   color: var(--accent);
 }
 
-.cat-exploreLink {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--accent);
-  font-weight: 700;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateY(6px);
-}
-
-.cat-card:hover .cat-exploreLink {
-  opacity: 0.85;
-  transform: translateY(0);
-}
 
 @media (max-width: 768px) {
   .cat-section {
@@ -3226,10 +3211,6 @@
 
   .hero-collageContainer {
     max-width: 360px;
-  }
-
-  .hero-collageCard {
-    padding: 4px;
   }
 
   .hero-collageOverlay {

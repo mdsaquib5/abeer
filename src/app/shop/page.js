@@ -6,7 +6,15 @@ import { products } from '@/data/products';
 import ProductGrid from '@/components/shared/ProductGrid';
 import SectionTitle from '@/components/ui/SectionTitle';
 import { IoFilterOutline, IoCloseOutline } from 'react-icons/io5';
-;
+
+const categoryLabels = {
+  'all': 'All Categories',
+  'farshi-salwars-collection': 'Farshi Salwars Collection',
+  'kurti-collection': 'Kurti Collection',
+  'kurti-sets': 'Kurti Sets',
+  'ethnic-dresses': 'Ethnic Dresses',
+  'new-collection': 'New Collection'
+};
 
 function ShopContent() {
   const searchParams = useSearchParams();
@@ -25,7 +33,7 @@ function ShopContent() {
 
   // Available options
   const collections = ['all', 'basant-bahaar', 'floral-affaire-nargis'];
-  const categoriesList = ['all', 'kurta-sets', 'farshi-sets', 'ethnic-dresses', 'new-arrivals', 'coming-soon'];
+  const categoriesList = ['all', 'farshi-salwars-collection', 'kurti-collection', 'kurti-sets', 'ethnic-dresses', 'new-collection'];
   const sizes = ['XS', 'S', 'M', 'L', 'XL', '2XL'];
 
   // Handle updates to query params
@@ -66,17 +74,24 @@ function ShopContent() {
 
     // Filter by Category
     if (currentCategory !== 'all') {
-      const matchMap = {
-        'kurti-sets': 'Kurti Sets',
-        'farshi-sets': 'Farshi Sets',
-        'ethnic-dresses': 'Ethnic Dresses',
-        'new-arrivals': 'New Arrivals',
-        'coming-soon': 'Coming Soon'
-      };
-      const matchCategory = matchMap[currentCategory] || '';
-      if (matchCategory) {
-        result = result.filter((p) => p.category === matchCategory);
-      }
+      result = result.filter((p) => {
+        if (currentCategory === 'farshi-salwars-collection') {
+          return p.category === 'Farshi Salwars Collection';
+        }
+        if (currentCategory === 'kurti-collection') {
+          return p.category === 'Kurti Collection' || p.category === 'Kurti Sets' || p.category === 'Farshi Salwars Collection';
+        }
+        if (currentCategory === 'kurti-sets') {
+          return p.category === 'Kurti Sets' || p.category === 'Farshi Salwars Collection';
+        }
+        if (currentCategory === 'ethnic-dresses') {
+          return p.category === 'Ethnic Dresses';
+        }
+        if (currentCategory === 'new-collection') {
+          return p.collection === 'Basant Bahaar';
+        }
+        return false;
+      });
     }
 
     // Filter by Size
@@ -145,7 +160,7 @@ function ShopContent() {
               className={`shop-filterBtn ${currentCategory === cat ? 'shop-filterBtnActive' : ''}`}
               onClick={() => updateQueryParam('category', cat)}
             >
-              {cat.replace('-', ' ')}
+              {categoryLabels[cat] || cat}
             </button>
           ))}
         </div>

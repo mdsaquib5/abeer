@@ -20,7 +20,7 @@ export default function CategorySection() {
           {categories.map((cat) => (
             <Link
               key={cat.id}
-              href={`/shop/`}
+              href={`/category/${cat.slug}`}
               className="cat-card"
             >
               <div className="cat-circleOuter">
@@ -35,7 +35,6 @@ export default function CategorySection() {
                 </div>
               </div>
               <h3 className="cat-name">{cat.name}</h3>
-              <span className="cat-exploreLink">Explore</span>
             </Link>
           ))}
         </div>

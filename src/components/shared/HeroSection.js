@@ -91,36 +91,36 @@ export default function HeroSection() {
 
   const collageItems = [
     {
-      id: "/shop",
+      id: "ethnic-dresses",
       name: "Ethnic Dresses",
       image: "/qala-one-pirce-ethenic-dress/image-1.jpg",
       className: "hero-cardMain",
       variants: cardVariantsMain
     },
     {
-      id: "/shop",
+      id: "kurti-sets",
       name: "Kurti Sets",
       image: "/geet-kurta-set-2pc/image-4.jpg",
       className: "hero-cardTopLeft",
       variants: cardVariantsTopLeft
     },
     {
-      id: "/shop",
-      name: "New Arrivals",
+      id: "new-collection",
+      name: "New Collection",
       image: "/geet-kurta-set-2pc/image-2.jpg",
       className: "hero-cardTopRight",
       variants: cardVariantsTopRight
     },
     {
-      id: "/shop",
-      name: "Hania Kurta",
+      id: "kurti-collection",
+      name: "Kurti Collection",
       image: "/hania-kurta-set-2pc/image-14.jpg",
       className: "hero-cardBottomLeft",
       variants: cardVariantsBottomLeft
     },
     {
-      id: "/shop",
-      name: "Farshi Sets",
+      id: "farshi-salwars-collection",
+      name: "Farshi Salwars",
       image: "/hania-kurta-set-2pc/image-1.jpg",
       className: "hero-cardMiddleRight",
       variants: cardVariantsMiddleRight
@@ -184,7 +184,7 @@ export default function HeroSection() {
                     transition: { duration: 0.4, ease: [0.16, 1, 0.3, 1] }
                   }}
                 >
-                  <Link href={`/shop?category=${item.id}`} className="hero-collageLink">
+                  <Link href={`/category/${item.id}`} className="hero-collageLink">
                     <div className="hero-collageImageWrapper">
                       <Image
                         src={item.image}
