@@ -41,7 +41,7 @@ export default function CheckoutPage() {
 
     // Simulate order placement
     const orderId = `AB-${Math.floor(100000 + Math.random() * 900000)}`;
-    
+
     // Save order metadata in localStorage for Order Success screen
     const orderDetails = {
       orderId,
@@ -50,11 +50,11 @@ export default function CheckoutPage() {
       shippingName: `${firstName} ${lastName}`,
       address: `${address}, ${city}, ${state} - ${zipCode}`,
       amount: subtotal,
-      items: items.map((i) => ({ 
-        name: i.product.name, 
-        size: i.size, 
+      items: items.map((i) => ({
+        name: i.product.name,
+        size: i.size,
         qty: i.quantity,
-        price: i.product.price 
+        price: i.product.price
       }))
     };
     localStorage.setItem('abeer-last-order', JSON.stringify(orderDetails));
@@ -67,7 +67,7 @@ export default function CheckoutPage() {
       return `• *${item.product.name}*\n  Size: ${item.size}\n  Qty: ${item.quantity}\n  Price per item: ₹${itemPrice.toLocaleString('en-IN')}\n  Subtotal: ₹${itemSubtotal.toLocaleString('en-IN')}`;
     }).join('\n\n');
 
-    const messageText = `*NEW ORDER - ABEER*\n` +
+    const messageText = `*NEW ORDER - ABEER.LABEL*\n` +
       `--------------------------\n` +
       `*Order ID:* ${orderId}\n` +
       `*Name:* ${firstName} ${lastName}\n` +
@@ -235,7 +235,7 @@ export default function CheckoutPage() {
               <p className="chk-prepaidNotice">
                 ❀ <strong>Prepaid Order Only:</strong> Cash on delivery is not accepted.
               </p>
-              
+
               <div className="chk-paymentOptions">
                 <label className={`chk-paymentLabel ${paymentMethod === 'card' ? 'chk-paymentLabelActive' : ''}`} style={{ opacity: 0.6, cursor: 'not-allowed' }}>
                   <input
@@ -275,7 +275,7 @@ export default function CheckoutPage() {
 
           <div className="chk-summaryContainer">
             <h3 className="chk-summaryTitle">Your Order</h3>
-            
+
             <div className="chk-summaryItems">
               {items.map((item) => (
                 <div key={`${item.product.id}-${item.size}`} className="chk-itemRow">

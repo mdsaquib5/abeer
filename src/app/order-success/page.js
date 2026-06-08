@@ -26,7 +26,7 @@ export default function OrderSuccessPage() {
       return `• *${item.name}*\n  Size: ${item.size}\n  Qty: ${item.qty}\n  Price per item: ₹${itemPrice.toLocaleString('en-IN')}\n  Subtotal: ₹${itemSubtotal.toLocaleString('en-IN')}`;
     }).join('\n\n');
 
-    const messageText = `*NEW ORDER - ABEER*\n` +
+    const messageText = `*NEW ORDER - ABEER.LABEL*\n` +
       `--------------------------\n` +
       `*Order ID:* ${orderDetails.orderId}\n` +
       `*Name:* ${orderDetails.shippingName}\n` +
@@ -109,10 +109,10 @@ export default function OrderSuccessPage() {
           <div className="success-footer">
             <div className="success-buttonsGroup">
               {orderDetails && (
-                <a 
-                  href={getWhatsAppLink()} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
+                <a
+                  href={getWhatsAppLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="success-whatsappBtn"
                 >
                   Send Details to WhatsApp
