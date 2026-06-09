@@ -169,7 +169,7 @@ export default function ProductDetailPage({ params: paramsPromise }) {
 
           {/* Details Block */}
           <div className="prod-detailsContainer">
-            <span className="prod-brand">ABEER LABEL</span>
+            <span className="prod-brand">ABEER.LABEL</span>
             <h1 className="prod-title">{product.name}</h1>
             <p className="prod-collection">Collection: {product.collection}</p>
             <p className="prod-price">₹{product.price.toLocaleString('en-IN')}</p>
