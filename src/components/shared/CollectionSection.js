@@ -51,7 +51,7 @@ export default function CollectionSection() {
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="colsec-image"
               />
-              <span className={`colsec-badge colsec-comingSoonBadge`}>Launching 15 June</span>
+              <span className={`colsec-badge colsec-comingSoonBadge`}>Launching Soon</span>
             </div>
 
             <div className="colsec-content">
