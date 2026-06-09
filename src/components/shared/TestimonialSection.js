@@ -7,19 +7,19 @@ const testimonials = [
     id: 1,
     name: "Sana Khan",
     rating: 5,
-    review: "Abeer pieces feel luxurious, breathable and timeless. The Mal-Chander fabric is so soft on the skin and the fit is flowy and elegant."
+    review: "The fabric is very soft and comfortable. Got so many compliments when I wore it!"
   },
   {
     id: 2,
     name: "Meera Iyer",
     rating: 5,
-    review: "The attention to embroidery details on my Geet Farshi Set is immaculate. Truly a slow fashion dream that stands out in a crowd."
+    review: "The embroidery is super neat and beautiful. Looks exactly like the pictures."
   },
   {
     id: 3,
     name: "Aisha Rahil",
     rating: 5,
-    review: "Wearing the Qala dress feels like poetry in motion. It has a beautiful, nostalgic drape while feeling incredibly modern. Wear Your Soul indeed!"
+    review: "Very nice fit and drape. Extremely comfortable to wear all day long."
   }
 ];
 
