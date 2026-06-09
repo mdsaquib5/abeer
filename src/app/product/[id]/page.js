@@ -224,6 +224,22 @@ export default function ProductDetailPage({ params: paramsPromise }) {
               )}
             </div>
 
+            {/* Preload all gallery images in background to avoid any switch delays */}
+            <div style={{ display: 'none' }} aria-hidden="true">
+              {product.images.map((img, index) => (
+                index !== activeImage && (
+                  <div key={index} style={{ position: 'relative', width: '1px', height: '1px' }}>
+                    <Image
+                      src={img}
+                      alt="preload"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                  </div>
+                )
+              ))}
+            </div>
+
             {/* Thumbnails grid */}
             {((product.images && product.images.length > 1) || (product.images && product.images.length > 0 && product.video)) && (
               <div className="prod-thumbnails">
