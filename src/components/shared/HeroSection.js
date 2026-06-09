@@ -107,7 +107,7 @@ export default function HeroSection() {
     {
       id: "new-collection",
       name: "New Collection",
-      image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986681/7_uqczj7.heic",
+      image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986681/7_uqczj7.jpg",
       className: "hero-cardTopRight",
       variants: cardVariantsTopRight
     },

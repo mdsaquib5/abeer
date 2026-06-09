@@ -73,7 +73,7 @@ export default function CategoryDetailPage({ params: paramsPromise }) {
           <div className="col-comingSoonBox">
             <h3 className="col-comingSoonTitle">Floral Affairé — NARGÍS</h3>
             <p className="col-comingSoonDesc">
-              Our upcoming summer narrative of handwoven textures and organic luxury will launch on <strong>15 June 2026</strong>.
+              Our upcoming summer narrative of handwoven textures and organic luxury will launch on <strong>Launching Soon</strong>.
             </p>
           </div>
         ) : (

@@ -139,7 +139,7 @@ export const collections = [
     tagline: "❀ Coming 15 June ❀",
     description: "Sensory tales of handwoven textures and romantic summer prints. An upcoming narrative of organic luxury.",
     status: "coming-soon",
-    launchDate: "15 June 2026",
+    launchDate: "Launching Soon",
     image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780991430/nargis-profile_mbalmc.jpg"
   }
 ];
