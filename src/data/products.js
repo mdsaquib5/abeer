@@ -46,7 +46,6 @@ export const products = [
       "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986688/8_nvw1vb.jpg",
       "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986689/10_a6ukfr.jpg",
       "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986689/11_ewww24.jpg",
-      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986691/12_sgqb3q.jpg"
     ],
     video: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861949/video-1_bndukx.mp4",
     composition: "100% Mal-Chander (Kurtis) & Premium Shantoon (Farshi)",
