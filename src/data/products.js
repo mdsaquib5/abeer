@@ -98,7 +98,7 @@ export const products = [
     collection: "Basant Bahaar",
     aspectRatio: "landscape", // 4:3
     images: [
-      "/noor-kurta-set/1.jpg",
+      "/noor-kurta-set/main-imag.jpg",
       "/noor-kurta-set/2.jpg",
       "/noor-kurta-set/3.jpg",
       "/noor-kurta-set/4.jpg",
