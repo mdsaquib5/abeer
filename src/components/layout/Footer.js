@@ -27,8 +27,8 @@ export default function Footer() {
             <ul className="ftr-linksList">
               <li><Link href="/" className="ftr-link">Home</Link></li>
               <li><Link href="/shop" className="ftr-link">Shop All</Link></li>
-              <li><Link href="/shop?collection=basant-bahaar" className="ftr-link">Basant Bahaar</Link></li>
-              <li><Link href="/#about-section" className="ftr-link">Our Story</Link></li>
+              <li><Link href="/shop?collection=basant-bahaar" className="ftr-link">Basant Bahaar Collection</Link></li>
+              <li><Link href="/#about-section" className="ftr-link">Founder Message</Link></li>
             </ul>
           </div>
           <div className="ftr-linksCol">

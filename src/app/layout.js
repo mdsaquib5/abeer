@@ -7,6 +7,7 @@ import "./responsive.css";
 import "./new.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import BackToTop from "@/components/ui/BackToTop";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main style={{ minHeight: "80vh", display: "flex", flexDirection: "column" }}>{children}</main>
         <Footer />
+        <BackToTop />
       </body>
     </html>
   );
