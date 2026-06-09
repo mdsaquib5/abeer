@@ -100,7 +100,7 @@ export default function HeroSection() {
     {
       id: "kurti-sets",
       name: "Kurti Sets",
-      image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986684/6_tehv8l.jpg",
+      image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986684/2_hkflkm.jpg",
       className: "hero-cardTopLeft",
       variants: cardVariantsTopLeft
     },
@@ -121,7 +121,7 @@ export default function HeroSection() {
     {
       id: "farshi-salwars-collection",
       name: "Farshi Salwars",
-      image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780987685/1_qxqsq0.jpg",
+      image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780987707/14_wvgybs.jpg",
       className: "hero-cardMiddleRight",
       variants: cardVariantsMiddleRight
     }
@@ -190,7 +190,7 @@ export default function HeroSection() {
                         src={item.image}
                         alt={`${item.name} Category`}
                         fill
-                        priority
+                        loading="eager"
                         sizes="(max-width: 768px) 50vw, 33vw"
                         className="hero-collageImage"
                       />
