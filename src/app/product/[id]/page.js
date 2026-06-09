@@ -10,13 +10,13 @@ import Accordion from '@/components/ui/Accordion';
 import SectionTitle from '@/components/ui/SectionTitle';
 import ProductCard from '@/components/shared/ProductCard';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  IoArrowBackOutline, 
-  IoPlay, 
-  IoChevronBackOutline, 
-  IoChevronForwardOutline, 
+import {
+  IoArrowBackOutline,
+  IoPlay,
+  IoChevronBackOutline,
+  IoChevronForwardOutline,
   IoCloseOutline,
-  IoExpandOutline 
+  IoExpandOutline
 } from 'react-icons/io5';
 
 export default function ProductDetailPage({ params: paramsPromise }) {
@@ -46,9 +46,9 @@ export default function ProductDetailPage({ params: paramsPromise }) {
 
   const mediaItems = product
     ? [
-        ...product.images.map((img, idx) => ({ type: 'image', url: img, index: idx })),
-        ...(product.video ? [{ type: 'video', url: product.video, index: 'video' }] : [])
-      ]
+      ...product.images.map((img, idx) => ({ type: 'image', url: img, index: idx })),
+      ...(product.video ? [{ type: 'video', url: product.video, index: 'video' }] : [])
+    ]
     : [];
 
   const nextLightboxItem = () => {
@@ -190,8 +190,8 @@ export default function ProductDetailPage({ params: paramsPromise }) {
         <div className={`prod-mainLayout ${galleryLayoutClass}`}>
           {/* Gallery Block */}
           <div className="prod-galleryContainer">
-            <div 
-              className="prod-activeImageWrapper" 
+            <div
+              className="prod-activeImageWrapper"
               onClick={handleOpenLightbox}
               title="Click to zoom image"
             >
@@ -421,7 +421,7 @@ export default function ProductDetailPage({ params: paramsPromise }) {
             </div>
 
             {/* Main Area */}
-            <div 
+            <div
               className="prod-lightboxMainArea"
               onClick={(e) => e.stopPropagation()}
             >
@@ -438,7 +438,7 @@ export default function ProductDetailPage({ params: paramsPromise }) {
               </button>
 
               {/* Media Wrapper */}
-              <div 
+              <div
                 className="prod-lightboxMediaWrapper"
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
@@ -453,6 +453,7 @@ export default function ProductDetailPage({ params: paramsPromise }) {
                       controls
                       autoPlay
                       loop
+                      muted
                       playsInline
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
@@ -495,7 +496,7 @@ export default function ProductDetailPage({ params: paramsPromise }) {
             </div>
 
             {/* Thumbnail Strip */}
-            <div 
+            <div
               className="prod-lightboxThumbnails"
               onClick={(e) => e.stopPropagation()}
             >
