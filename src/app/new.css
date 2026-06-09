@@ -3790,10 +3790,10 @@
 }
 
 .pc-brand {
-  font-size: 0.7rem;
+  font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.1em;
-  color: var(--accent);
+  color: var(--secondary);
   text-transform: uppercase;
 }
 

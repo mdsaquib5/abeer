@@ -36,8 +36,8 @@ export default function ProductCard({ product }) {
     setIsWishlisted(!isWishlisted);
   };
 
-  const cardStyleClass = product.aspectRatio === 'landscape' 
-    ? 'pc-landscapeCard' 
+  const cardStyleClass = product.aspectRatio === 'landscape'
+    ? 'pc-landscapeCard'
     : 'pc-portraitCard';
 
   return (
@@ -71,7 +71,7 @@ export default function ProductCard({ product }) {
         </Link>
 
         {/* Wishlist Button */}
-        <button 
+        <button
           className={`pc-wishlistBtn ${isWishlisted ? 'pc-activeWish' : ''}`}
           onClick={handleWishlistClick}
           aria-label="Add to wishlist"
@@ -88,7 +88,7 @@ export default function ProductCard({ product }) {
 
         {/* Quick Action Overlay (Desktop) */}
         <div className="pc-actionOverlay">
-          <button 
+          <button
             className="pc-quickActionBtn"
             onClick={handleAddToCartClick}
           >
@@ -105,7 +105,7 @@ export default function ProductCard({ product }) {
             <p className="pc-sizeTitle">Choose Size</p>
             <div className="pc-sizesGrid">
               {product.sizes.map((size) => (
-                <button 
+                <button
                   key={size}
                   className="pc-sizeBtn"
                   onClick={(e) => selectSize(size, e)}
@@ -114,7 +114,7 @@ export default function ProductCard({ product }) {
                 </button>
               ))}
             </div>
-            <button 
+            <button
               className="pc-closeSizeBtn"
               onClick={(e) => { e.preventDefault(); e.stopPropagation(); setShowSizeSelector(false); }}
             >
@@ -124,10 +124,9 @@ export default function ProductCard({ product }) {
         )}
       </div>
 
-      {/* Product Details Section */}
       <div className="pc-info">
         <div className="pc-brandRow">
-          <span className="pc-brand">ABEER</span>
+          <span className="pc-brand">ABEER.LABLE</span>
           <span className="pc-collection">{product.collection}</span>
         </div>
         <Link href={`/product/${product.id}`} className="pc-titleLink">
@@ -136,8 +135,8 @@ export default function ProductCard({ product }) {
         <div className="pc-bottomRow">
           <p className="pc-price">₹{product.price.toLocaleString('en-IN')}</p>
           {/* Mobile direct CTA button */}
-          <button 
-            className="pc-mobileAddBtn" 
+          <button
+            className="pc-mobileAddBtn"
             onClick={handleAddToCartClick}
             aria-label="Add to cart"
           >

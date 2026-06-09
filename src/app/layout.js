@@ -31,7 +31,7 @@ const parisienne = Parisienne({
 });
 
 export const metadata = {
-  title: "ABEER – Wear Your Soul | Luxury Women's Ethnic Wear",
+  title: "ABEER.LABEL – Wear Your Soul | Luxury Women's Ethnic Wear",
   description: "A reflection of slow fashion, quiet luxury, and timeless design. Exquisite, handcrafted ethnic wear for the modern desi muse.",
 };
 

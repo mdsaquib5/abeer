@@ -79,7 +79,7 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="ftr-bottomBar">
           <p className="ftr-copyright">
-            &copy; {new Date().getFullYear()} ABEER. All Rights Reserved.
+            &copy; {new Date().getFullYear()} ABEER All Rights Reserved.
           </p>
           <p className="ftr-developer">
             Developed by <a href="https://noohark.com" target="_blank" rel="noopener noreferrer" className="ftr-developerLink">NoohArk.com</a>
