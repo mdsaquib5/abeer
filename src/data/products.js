@@ -131,7 +131,7 @@ export const collections = [
     tagline: "❀ Wear Your Soul ❀",
     description: "A celebration of ethnic roots and modern Y2K nostalgia. Tailored flowy silhouettes, hand embroidered motifs, and premium breathable fabrics.",
     status: "active",
-    image: "/basant-bahar.jpg"
+    image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780991430/basant-bahar_itpjv8.jpg"
   },
   {
     id: "floral-affaire-nargis",
@@ -140,7 +140,7 @@ export const collections = [
     description: "Sensory tales of handwoven textures and romantic summer prints. An upcoming narrative of organic luxury.",
     status: "coming-soon",
     launchDate: "15 June 2026",
-    image: "/nargis-profile.jpg"
+    image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780991430/nargis-profile_mbalmc.jpg"
   }
 ];
 
@@ -149,5 +149,5 @@ export const categories = [
   { id: "kurti-collection", name: "Kurti Collection", slug: "kurti-collection", tagline: "❀ Summer Silhouettes ❀", description: "Soft, breathable Mal-Chander Kurtis for hot summer days, detailed with premium embroidery.", image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986684/6_tehv8l.jpg" },
   { id: "kurti-sets", name: "Kurti Sets", slug: "kurti-sets", tagline: "❀ Handcrafted Elegance ❀", description: "2-piece kurta and salwar sets designed for ease and quiet luxury.", image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780988282/main-image_g4f7ki.jpg" },
   { id: "ethnic-dresses", name: "Ethnic Dresses", slug: "ethnic-dresses", tagline: "❀ Ethereal Drape ❀", description: "Beautiful one-piece silhouettes crafted from premium signature fabric.", image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780988734/1_sczouh.jpg" },
-  { id: "new-collection", name: "New Collection", slug: "new-collection", tagline: "❀ Fresh Narrative ❀", description: "Explore the latest designs and silhouettes from our label archives.", image: "/nargis-profile.jpg" }
+  { id: "new-collection", name: "New Collection", slug: "new-collection", tagline: "❀ Fresh Narrative ❀", description: "Explore the latest designs and silhouettes from our label archives.", image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780991430/nargis-profile_mbalmc.jpg" }
 ];

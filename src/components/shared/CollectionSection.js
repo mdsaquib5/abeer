@@ -20,7 +20,7 @@ export default function CollectionSection() {
           <div className={`colsec-card colsec-leftCard`}>
             <div className="colsec-imageContainer">
               <Image
-                src="/basant-bahar.jpg"
+                src="https://res.cloudinary.com/dhufjjp9t/image/upload/v1780991430/basant-bahar_itpjv8.jpg"
                 alt="Basant Bahaar Collection"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -45,7 +45,7 @@ export default function CollectionSection() {
           <div className={`colsec-card colsec-rightCard`}>
             <div className="colsec-imageContainer">
               <Image
-                src="/nargis-profile.jpg"
+                src="https://res.cloudinary.com/dhufjjp9t/image/upload/v1780991430/nargis-profile_mbalmc.jpg"
                 alt="Floral Affairé — NARGÍS Collection"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

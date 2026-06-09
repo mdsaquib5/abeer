@@ -45,7 +45,7 @@ export default function AboutSection() {
           <div className="about-media">
             <div className="about-frame">
               <Image
-                src="/Logo Image .png"
+                src="https://res.cloudinary.com/dhufjjp9t/image/upload/v1780991430/logo-image_cuutr7.png"
                 alt="Abeer Brand Narrative Editorial representation"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"

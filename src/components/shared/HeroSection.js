@@ -93,35 +93,35 @@ export default function HeroSection() {
     {
       id: "ethnic-dresses",
       name: "Ethnic Dresses",
-      image: "/qala-one-pirce-ethenic-dress/image-1.jpg",
+      image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780988734/1_sczouh.jpg",
       className: "hero-cardMain",
       variants: cardVariantsMain
     },
     {
       id: "kurti-sets",
       name: "Kurti Sets",
-      image: "/geet-kurta-set-2pc/image-4.jpg",
+      image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986684/6_tehv8l.jpg",
       className: "hero-cardTopLeft",
       variants: cardVariantsTopLeft
     },
     {
       id: "new-collection",
       name: "New Collection",
-      image: "/geet-kurta-set-2pc/image-2.jpg",
+      image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986681/7_uqczj7.heic",
       className: "hero-cardTopRight",
       variants: cardVariantsTopRight
     },
     {
       id: "kurti-collection",
       name: "Kurti Collection",
-      image: "/hania-kurta-set-2pc/image-14.jpg",
+      image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780987685/1_qxqsq0.jpg",
       className: "hero-cardBottomLeft",
       variants: cardVariantsBottomLeft
     },
     {
       id: "farshi-salwars-collection",
       name: "Farshi Salwars",
-      image: "/hania-kurta-set-2pc/image-1.jpg",
+      image: "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780987685/1_qxqsq0.jpg",
       className: "hero-cardMiddleRight",
       variants: cardVariantsMiddleRight
     }
