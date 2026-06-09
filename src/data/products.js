@@ -35,13 +35,18 @@ export const products = [
     collection: "Basant Bahaar",
     aspectRatio: "portrait", // 3:4
     images: [
-      "/geet-kurta-set-2pc/image-2.jpg",
-      "/geet-kurta-set-2pc/image-4.jpg",
-      "/geet-kurta-set-2pc/image-6.jpg",
-      "/geet-kurta-set-2pc/image-8.jpg",
-      "/geet-kurta-set-2pc/image-10.jpg",
-      "/geet-kurta-set-2pc/image-12.jpg",
-      "/size-chart.png"
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986681/5_z2qjyp.jpg",
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986681/7_uqczj7.jpg",
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986682/3_d5bvgz.jpg",
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986681/1_cpeyas.jpg",
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986684/2_hkflkm.jpg",
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986684/6_tehv8l.jpg",
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986684/4_hm5pes.jpg",
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986686/9_zrnwb4.jpg",
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986688/8_nvw1vb.jpg",
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986689/10_a6ukfr.jpg",
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986689/11_ewww24.jpg",
+      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986691/12_sgqb3q.jpg"
     ],
     video: "https://res.cloudinary.com/dhufjjp9t/video/upload/v1780861949/video-1_bndukx.mp4",
     composition: "100% Mal-Chander (Kurtis) & Premium Shantoon (Farshi)",
