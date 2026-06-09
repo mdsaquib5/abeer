@@ -190,6 +190,20 @@ export default function ProductDetailPage({ params: paramsPromise }) {
         <div className={`prod-mainLayout ${galleryLayoutClass}`}>
           {/* Gallery Block */}
           <div className="prod-galleryContainer">
+            {/* Preload all product images to enable instant switching */}
+            <div style={{ display: 'none' }} aria-hidden="true">
+              {product.images.map((img, index) => (
+                <Image
+                  key={index}
+                  src={img}
+                  alt="Preload"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              ))}
+            </div>
+
             <div
               className="prod-activeImageWrapper"
               onClick={handleOpenLightbox}
