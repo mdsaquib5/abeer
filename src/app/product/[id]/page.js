@@ -203,6 +203,7 @@ export default function ProductDetailPage({ params: paramsPromise }) {
                   src={product.video}
                   className="prod-activeVideo prod-activeImage"
                   controls
+                  controlsList="novolume"
                   autoPlay
                   loop
                   muted
@@ -451,6 +452,7 @@ export default function ProductDetailPage({ params: paramsPromise }) {
                       src={mediaItems[lightboxIndex].url}
                       className="prod-lightboxVideo"
                       controls
+                      controlsList="novolume"
                       autoPlay
                       loop
                       muted

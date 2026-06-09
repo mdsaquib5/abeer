@@ -4657,3 +4657,9 @@
     font-size: 20px;
   }
 }
+
+/* Hide default video player volume and mute controls globally */
+video::-webkit-media-controls-volume-control-container,
+video::-webkit-media-controls-mute-button {
+  display: none !important;
+}
