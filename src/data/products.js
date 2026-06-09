@@ -99,7 +99,7 @@ export const products = [
     aspectRatio: "landscape", // 4:3
     images: [
       "/noor-kurta-set/main-imag.jpg",
-      "/noor-kurta-set/2.jpg",
+      "/noor-kurta-set/main-image-2.jpg",
       "/noor-kurta-set/3.jpg",
       "/noor-kurta-set/4.jpg",
       "/noor-kurta-set/5.jpg",
