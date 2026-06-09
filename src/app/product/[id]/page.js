@@ -9,7 +9,15 @@ import { useCartStore } from '@/store/cartStore';
 import Accordion from '@/components/ui/Accordion';
 import SectionTitle from '@/components/ui/SectionTitle';
 import ProductCard from '@/components/shared/ProductCard';
-import { IoArrowBackOutline, IoPlay } from 'react-icons/io5';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  IoArrowBackOutline, 
+  IoPlay, 
+  IoChevronBackOutline, 
+  IoChevronForwardOutline, 
+  IoCloseOutline,
+  IoExpandOutline 
+} from 'react-icons/io5';
 
 export default function ProductDetailPage({ params: paramsPromise }) {
   const router = useRouter();
@@ -26,7 +34,90 @@ export default function ProductDetailPage({ params: paramsPromise }) {
   const [addedMessage, setAddedMessage] = useState(false);
   const [recentlyViewed, setRecentlyViewed] = useState([]);
 
+  // Lightbox States
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  // Swipe Gestures States
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
   const addToCart = useCartStore((state) => state.addToCart);
+
+  const mediaItems = product
+    ? [
+        ...product.images.map((img, idx) => ({ type: 'image', url: img, index: idx })),
+        ...(product.video ? [{ type: 'video', url: product.video, index: 'video' }] : [])
+      ]
+    : [];
+
+  const nextLightboxItem = () => {
+    setLightboxIndex((prev) => (prev + 1) % mediaItems.length);
+  };
+
+  const prevLightboxItem = () => {
+    setLightboxIndex((prev) => (prev - 1 + mediaItems.length) % mediaItems.length);
+  };
+
+  const handleOpenLightbox = () => {
+    const idx = mediaItems.findIndex((item) => item.index === activeImage);
+    setLightboxIndex(idx !== -1 ? idx : 0);
+    setIsLightboxOpen(true);
+  };
+
+  // Keyboard Navigation
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowRight') {
+        nextLightboxItem();
+      } else if (e.key === 'ArrowLeft') {
+        prevLightboxItem();
+      } else if (e.key === 'Escape') {
+        setIsLightboxOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isLightboxOpen, mediaItems.length]);
+
+  // Background Scroll Lock
+  useEffect(() => {
+    if (isLightboxOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isLightboxOpen]);
+
+  // Touch Swipe Handlers
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+    if (isLeftSwipe) {
+      nextLightboxItem();
+    } else if (isRightSwipe) {
+      prevLightboxItem();
+    }
+  };
 
   // Set default active image and save recently viewed items
   useEffect(() => {
@@ -99,7 +190,14 @@ export default function ProductDetailPage({ params: paramsPromise }) {
         <div className={`prod-mainLayout ${galleryLayoutClass}`}>
           {/* Gallery Block */}
           <div className="prod-galleryContainer">
-            <div className="prod-activeImageWrapper">
+            <div 
+              className="prod-activeImageWrapper" 
+              onClick={handleOpenLightbox}
+              title="Click to zoom image"
+            >
+              <div className="prod-zoomOverlay">
+                <IoExpandOutline />
+              </div>
               {activeImage === 'video' && product.video ? (
                 <video
                   src={product.video}
@@ -296,6 +394,147 @@ export default function ProductDetailPage({ params: paramsPromise }) {
           </div>
         )}
       </div>
+
+      {/* Lightbox Modal Overlay */}
+      <AnimatePresence>
+        {isLightboxOpen && (
+          <motion.div
+            className="prod-lightboxOverlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={() => setIsLightboxOpen(false)}
+          >
+            {/* Header */}
+            <div className="prod-lightboxHeader" onClick={(e) => e.stopPropagation()}>
+              <span className="prod-lightboxCounter">
+                {String(lightboxIndex + 1).padStart(2, '0')} / {String(mediaItems.length).padStart(2, '0')}
+              </span>
+              <button
+                className="prod-lightboxCloseBtn"
+                onClick={() => setIsLightboxOpen(false)}
+                aria-label="Close Lightbox"
+              >
+                <IoCloseOutline />
+              </button>
+            </div>
+
+            {/* Main Area */}
+            <div 
+              className="prod-lightboxMainArea"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Nav Left */}
+              <button
+                className="prod-lightboxNavBtn prod-lightboxNavLeft"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  prevLightboxItem();
+                }}
+                aria-label="Previous Slide"
+              >
+                <IoChevronBackOutline />
+              </button>
+
+              {/* Media Wrapper */}
+              <div 
+                className="prod-lightboxMediaWrapper"
+                onTouchStart={onTouchStart}
+                onTouchMove={onTouchMove}
+                onTouchEnd={onTouchEnd}
+              >
+                <AnimatePresence mode="wait">
+                  {mediaItems[lightboxIndex]?.type === 'video' ? (
+                    <motion.video
+                      key="video"
+                      src={mediaItems[lightboxIndex].url}
+                      className="prod-lightboxVideo"
+                      controls
+                      autoPlay
+                      loop
+                      playsInline
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                    />
+                  ) : (
+                    <motion.div
+                      key={mediaItems[lightboxIndex]?.url}
+                      style={{ position: 'relative', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+                      initial={{ opacity: 0, scale: 0.95 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.95 }}
+                      transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+                    >
+                      <Image
+                        src={mediaItems[lightboxIndex]?.url}
+                        alt={`${product.name} gallery image`}
+                        fill
+                        priority
+                        sizes="(max-width: 768px) 100vw, 80vw"
+                        className="prod-lightboxImage"
+                      />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+
+              {/* Nav Right */}
+              <button
+                className="prod-lightboxNavBtn prod-lightboxNavRight"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  nextLightboxItem();
+                }}
+                aria-label="Next Slide"
+              >
+                <IoChevronForwardOutline />
+              </button>
+            </div>
+
+            {/* Thumbnail Strip */}
+            <div 
+              className="prod-lightboxThumbnails"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {mediaItems.map((item, idx) => (
+                <button
+                  key={idx}
+                  className={`prod-lightboxThumbBtn ${lightboxIndex === idx ? 'prod-lightboxThumbActive' : ''}`}
+                  onClick={() => setLightboxIndex(idx)}
+                >
+                  {item.type === 'video' ? (
+                    <>
+                      {product.images && product.images[0] && (
+                        <Image
+                          src={product.images[0]}
+                          alt="Video thumbnail"
+                          fill
+                          sizes="60px"
+                          className="prod-lightboxThumbImage"
+                        />
+                      )}
+                      <div className="prod-lightboxVideoThumbOverlay">
+                        <IoPlay className="prod-lightboxVideoThumbPlay" />
+                      </div>
+                    </>
+                  ) : (
+                    <Image
+                      src={item.url}
+                      alt={`Thumbnail ${idx + 1}`}
+                      fill
+                      sizes="60px"
+                      className="prod-lightboxThumbImage"
+                    />
+                  )}
+                </button>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

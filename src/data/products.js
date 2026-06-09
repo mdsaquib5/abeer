@@ -143,7 +143,7 @@ export const collections = [
 export const categories = [
   { id: "farshi-salwars-collection", name: "Farshi Salwars Collection", slug: "farshi-salwars-collection", tagline: "❀ Nostalgic Desi Drapes ❀", description: "Revisiting Y2K era nostalgia with a modern ethnic edge. Exquisite drapes featuring hand embroidered details.", image: "/hania-kurta-set-2pc/image-14.jpg" },
   { id: "kurti-collection", name: "Kurti Collection", slug: "kurti-collection", tagline: "❀ Summer Silhouettes ❀", description: "Soft, breathable Mal-Chander Kurtis for hot summer days, detailed with premium embroidery.", image: "/geet-kurta-set-2pc/image-6.jpg" },
-  { id: "kurti-sets", name: "Kurti Sets", slug: "kurti-sets", tagline: "❀ Handcrafted Elegance ❀", description: "2-piece kurta and salwar sets designed for ease and quiet luxury.", image: "/geet-kurta-set-2pc/image-4.jpg" },
+  { id: "kurti-sets", name: "Kurti Sets", slug: "kurti-sets", tagline: "❀ Handcrafted Elegance ❀", description: "2-piece kurta and salwar sets designed for ease and quiet luxury.", image: "/noor-kurta-set/main-imag.jpg" },
   { id: "ethnic-dresses", name: "Ethnic Dresses", slug: "ethnic-dresses", tagline: "❀ Ethereal Drape ❀", description: "Beautiful one-piece silhouettes crafted from premium signature fabric.", image: "/qala-one-pirce-ethenic-dress/image-1.jpg" },
   { id: "new-collection", name: "New Collection", slug: "new-collection", tagline: "❀ Fresh Narrative ❀", description: "Explore the latest designs and silhouettes from our label archives.", image: "/nargis-profile.jpg" }
 ];

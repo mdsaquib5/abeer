@@ -10,9 +10,9 @@ export default function CollectionSection() {
   return (
     <section className="colsec-section">
       <div className="container">
-        <SectionTitle 
-          title="The Collections" 
-          subtitle="Conscious Silhouettes" 
+        <SectionTitle
+          title="The Collections"
+          subtitle="Conscious Silhouettes"
         />
 
         <div className="colsec-asymmetricalGrid">
@@ -28,7 +28,7 @@ export default function CollectionSection() {
               />
               <span className="colsec-badge">Active Collection</span>
             </div>
-            
+
             <div className="colsec-content">
               <span className="colsec-accentText">Basant Bahaar</span>
               <h3 className="colsec-title">Reflections of Spring</h3>
@@ -53,14 +53,14 @@ export default function CollectionSection() {
               />
               <span className={`colsec-badge colsec-comingSoonBadge`}>Launching 15 June</span>
             </div>
-            
+
             <div className="colsec-content">
               <span className="colsec-accentText">Floral Affairé — NARGÍS</span>
               <h3 className="colsec-title">Nostalgia of Summer</h3>
               <p className="colsec-description">
                 Soft feminine luxury inspired by the poetry of blooming jasmine and Y2K ethnic silhouettes. Coming soon to the Abeer Muse lookbook.
               </p>
-              <Link href="/shop?collection=nargis">
+              <Link href="category/new-collection">
                 <Button variant="primary">Shop Now</Button>
               </Link>
             </div>
