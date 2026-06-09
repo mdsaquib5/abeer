@@ -1239,8 +1239,6 @@
 .prod-activeImageWrapper {
   position: relative;
   width: 100%;
-  background-color: var(--bg-beige);
-  border: 1px solid var(--border-color);
   overflow: hidden;
   border-radius: 4px;
 }
@@ -1253,7 +1251,9 @@
 }
 
 .prod-landscapeGallery .prod-activeImageWrapper {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
+  height: 700px;
+  width: 100%;
 }
 
 .prod-activeImage {
@@ -2339,11 +2339,11 @@
 
 .about-welcome {
   font-family: var(--font-body);
-  font-size: 0.8rem;
+  font-size: 0.99rem;
   text-transform: uppercase;
   letter-spacing: 0.25em;
   color: var(--accent);
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 18px;
 }
 
@@ -4317,5 +4317,13 @@
 
   .sct-subtitle {
     font-size: 1.5rem;
+  }
+
+  .prod-landscapeGallery .prod-activeImageWrapper {
+    height: 600px;
+  }
+
+  .prod-activeImage {
+    object-fit: contain;
   }
 }

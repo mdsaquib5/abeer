@@ -13,7 +13,7 @@ import { IoArrowBackOutline, IoPlay } from 'react-icons/io5';
 
 export default function ProductDetailPage({ params: paramsPromise }) {
   const router = useRouter();
-  
+
   // React.use() wrapper to unwrap params in React 19 / Next.js 16 Client Component
   const params = React.use(paramsPromise);
   const { id } = params;
@@ -39,7 +39,7 @@ export default function ProductDetailPage({ params: paramsPromise }) {
       const viewed = JSON.parse(localStorage.getItem('abeer-recently-viewed') || '[]');
       const updated = [product.id, ...viewed.filter((vid) => vid !== product.id)].slice(0, 4);
       localStorage.setItem('abeer-recently-viewed', JSON.stringify(updated));
-      
+
       const viewedProducts = products.filter((p) => updated.includes(p.id) && p.id !== product.id);
       setRecentlyViewed(viewedProducts);
     }
@@ -83,8 +83,8 @@ export default function ProductDetailPage({ params: paramsPromise }) {
     router.push('/cart');
   };
 
-  const galleryLayoutClass = product.aspectRatio === 'landscape' 
-    ? 'prod-landscapeGallery' 
+  const galleryLayoutClass = product.aspectRatio === 'landscape'
+    ? 'prod-landscapeGallery'
     : 'prod-portraitGallery';
 
   return (
@@ -199,14 +199,14 @@ export default function ProductDetailPage({ params: paramsPromise }) {
             <div className="prod-quantitySection">
               <span className="prod-label">Quantity:</span>
               <div className="prod-quantityControls">
-                <button 
+                <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
                   className="prod-qtyBtn"
                 >
                   -
                 </button>
                 <span className="prod-qtyVal">{quantity}</span>
-                <button 
+                <button
                   onClick={() => setQuantity(quantity + 1)}
                   className="prod-qtyBtn"
                 >
@@ -217,13 +217,13 @@ export default function ProductDetailPage({ params: paramsPromise }) {
 
             {/* Action buttons */}
             <div className="prod-actions">
-              <button 
+              <button
                 onClick={handleAddToCart}
                 className="prod-addToCartBtn"
               >
                 Add to Bag
               </button>
-              <button 
+              <button
                 onClick={handleBuyNow}
                 className="prod-buyNowBtn"
               >

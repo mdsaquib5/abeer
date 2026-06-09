@@ -11,8 +11,6 @@ export default function AboutSection() {
           {/* Left Column: Story text */}
           <div className="about-content">
             <span className="about-welcome">Founder's Message</span>
-            <h2 className="about-headline">Mariyam Rehan's Vision</h2>
-
             <div className="about-storyText">
               <p>
                 Abeer is a reflection of slow fashion, quiet luxury, and timeless design.
