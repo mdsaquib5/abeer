@@ -41,7 +41,6 @@ export const products = [
       "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986684/2_hkflkm.jpg",
       "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986684/6_tehv8l.jpg",
       "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986684/4_hm5pes.jpg",
-      "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986686/9_zrnwb4.jpg",
       "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986688/8_nvw1vb.jpg",
       "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986689/10_a6ukfr.jpg",
       "https://res.cloudinary.com/dhufjjp9t/image/upload/v1780986689/11_ewww24.jpg",
