@@ -3,13 +3,12 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { IoHeartOutline, IoHeart, IoBagOutline, IoEyeOutline } from 'react-icons/io5';
+import { IoBagOutline, IoEyeOutline } from 'react-icons/io5';
 import { useCartStore } from '@/store/cartStore';
 ;
 
 export default function ProductCard({ product }) {
   const [showSizeSelector, setShowSizeSelector] = useState(false);
-  const [isWishlisted, setIsWishlisted] = useState(false);
   const [addedMessage, setAddedMessage] = useState(false);
   const addToCart = useCartStore((state) => state.addToCart);
 
@@ -30,19 +29,12 @@ export default function ProductCard({ product }) {
     }, 2000);
   };
 
-  const handleWishlistClick = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setIsWishlisted(!isWishlisted);
-  };
-
   const cardStyleClass = product.aspectRatio === 'landscape'
     ? 'pc-landscapeCard'
     : 'pc-portraitCard';
 
   return (
     <div className={`pc-card ${cardStyleClass} animate-fade-in`}>
-      {/* Product Image Gallery Wrapper */}
       <div className="pc-imageWrapper">
         <Link href={`/product/${product.id}`} className="pc-imageLink">
           {product.images && product.images[0] ? (
@@ -58,7 +50,6 @@ export default function ProductCard({ product }) {
             <div className="pc-placeholder">No Image</div>
           )}
 
-          {/* Hover Overlay Second Image */}
           {product.images && product.images[1] && (
             <Image
               src={product.images[1]}
@@ -69,15 +60,6 @@ export default function ProductCard({ product }) {
             />
           )}
         </Link>
-
-        {/* Wishlist Button */}
-        <button
-          className={`pc-wishlistBtn ${isWishlisted ? 'pc-activeWish' : ''}`}
-          onClick={handleWishlistClick}
-          aria-label="Add to wishlist"
-        >
-          {isWishlisted ? <IoHeart /> : <IoHeartOutline />}
-        </button>
 
         {/* Added to Cart Toast Overlay */}
         {addedMessage && (

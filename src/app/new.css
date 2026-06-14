@@ -3612,35 +3612,6 @@
   opacity: 1;
 }
 
-.pc-wishlistBtn {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  background-color: rgba(255, 250, 245, 0.85);
-  backdrop-filter: blur(4px);
-  color: var(--secondary);
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.25rem;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  transition: all 0.3s ease;
-}
-
-.pc-wishlistBtn:hover {
-  background-color: var(--bg-ivory);
-  transform: scale(1.1);
-}
-
-.pc-activeWish {
-  color: #c0392b;
-}
-
 .pc-toastOverlay {
   position: absolute;
   inset: 0;
